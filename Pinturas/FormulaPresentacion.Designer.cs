@@ -372,6 +372,7 @@
             this.button4.TabIndex = 1;
             this.button4.Text = "          Modificar (F2)";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -384,6 +385,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "        Nuevo (F1)";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 

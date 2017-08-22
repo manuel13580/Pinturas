@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
-
+using System.IO;
 namespace Pinturas
 {
 
@@ -82,6 +82,78 @@ namespace Pinturas
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 total = total + Convert.ToDouble(dataGridView1.Rows[i].Cells[2].Value.ToString());
             lbltotal.Text = "Total de la Formula: " + total + " (g).";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NuevoRegistro();
+        }
+        void NuevoRegistro()
+        {
+            Registro nuevo = new Registro();
+            nuevo.codigoP = valor;
+            nuevo.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int pos = dataGridView1.CurrentRow.Index;
+                Actualizar();
+                dataGridView1.Rows[pos].Selected = true;
+                ModificarRegistro(pos);
+            }
+            catch (Exception ex)
+            { }
+        }
+        void ModificarRegistro(int pos)
+        {
+            try
+            {
+                string Nuevo = "";
+                Nuevo = Microsoft.VisualBasic.Interaction.InputBox("La cantidad actual es de " + dataGridView1.Rows[pos].Cells[2].Value.ToString() + " (g) para una formula de " + combo_formula.Text + ", Ingrese la nueva cantidad (g)", "Nueva Cantidad", dataGridView1.Rows[pos].Cells[2].Value.ToString());
+                double NuevaCant = 0;
+                if (!Nuevo.Trim().Equals(""))
+                {
+                    try
+                    {
+                        NuevaCant = Convert.ToDouble(Nuevo);
+
+                        try
+                        {
+                            Conexion nueva = new Conexion();
+                            if (Nuevo.Trim() != "")
+                                nueva.EjecutarQuery("update Asignacion set Cantidad=" + NuevaCant + " where Id_presentacion=" + valor + " and Codigo_tinte='" + dataGridView1.Rows[pos].Cells[0].Value.ToString() + "' and Cantidad=" + dataGridView1.Rows[pos].Cells[2].Value.ToString() + ";");
+                            Actualizar();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error, Cantidad invalida");
+                    }
+                }
+
+            }
+            catch (Exception q)
+            { }
+
+
+        }
+    }
+}
+
+namespace Microsoft.VisualBasic
+{
+    class Interaction
+    {
+        internal static string InputBox(string v1, string v2, string v3)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -58,13 +58,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormulaPresentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaPresentacion.Designer.cs">
+      <DependentUpon>FormulaPresentacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CrearFormula.resx">
       <DependentUpon>CrearFormula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaPresentacion.resx">
+      <DependentUpon>FormulaPresentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,6 +91,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +112,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="imagenes\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\Graphicloads-Medical-Health-Equation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\Mpt1st-Construction-Paint-bucket.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\Hopstarter-Soft-Scraps-Gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\Oxygen-Icons.org-Oxygen-Actions-window-close.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
