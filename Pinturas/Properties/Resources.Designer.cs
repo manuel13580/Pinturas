@@ -79,5 +79,45 @@ namespace Pinturas.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Graphicloads_Medical_Health_Equation {
+            get {
+                object obj = ResourceManager.GetObject("Graphicloads-Medical-Health-Equation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hopstarter_Soft_Scraps_Gear {
+            get {
+                object obj = ResourceManager.GetObject("Hopstarter-Soft-Scraps-Gear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mpt1st_Construction_Paint_bucket {
+            get {
+                object obj = ResourceManager.GetObject("Mpt1st-Construction-Paint-bucket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Actions_window_close {
+            get {
+                object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Actions-window-close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
