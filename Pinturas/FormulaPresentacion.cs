@@ -30,14 +30,14 @@ namespace Pinturas
 
         private void FormulaPresentacion_Load(object sender, EventArgs e)
         {
-            menuStrip1.Enabled = false;
-            menuStrip1.Visible = false;
-            button3.Enabled = false;
-            button4.Enabled = false;
-            button5.Enabled = false;
-            button3.Visible = false;
-            button4.Visible = false;
-            button5.Visible = false;
+            menuStrip1.Enabled = true;
+            menuStrip1.Visible = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
+            button5.Enabled = true;
+            button3.Visible = true;
+            button4.Visible = true;
+            button5.Visible = true;
             Conexion nueva = new Conexion();
             SqlDataReader autos = nueva.Consulta("select * from Automovil;");
             while (autos.Read())
@@ -143,6 +143,10 @@ namespace Pinturas
             { }
 
 
+        }
+        private void dataGridView1_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dataGridView1.Select();
         }
     }
 }
