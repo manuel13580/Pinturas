@@ -22,5 +22,11 @@ namespace Pinturas
             Conexion nueva = new Conexion();
             nueva.conectar();
         }
+
+        private void presentacionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CrearFormula form=new CrearFormula();
+            form.Show();
+        }
     }
 }
