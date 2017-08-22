@@ -31,6 +31,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbltotal = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.combo_formula = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,9 +56,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtvolumen = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -107,6 +107,47 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(604, 351);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseMove);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            // 
+            // button5
+            // 
+            this.button5.Image = global::Pinturas.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_window_close;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(644, 289);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(160, 53);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "       Eliminar (F3)";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Image = global::Pinturas.Properties.Resources.Hopstarter_Soft_Scraps_Gear;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(644, 169);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(160, 55);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "          Modificar (F2)";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::Pinturas.Properties.Resources.Mpt1st_Construction_Paint_bucket;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(644, 62);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(160, 60);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "        Nuevo (F1)";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
@@ -281,8 +322,9 @@
             // actualizarToolStripMenuItem
             // 
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.actualizarToolStripMenuItem.Text = "Actualizar";
+            this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 
             // groupBox3
             // 
@@ -349,44 +391,6 @@
             this.txtvolumen.Size = new System.Drawing.Size(79, 22);
             this.txtvolumen.TabIndex = 10;
             // 
-            // button5
-            // 
-            this.button5.Image = global::Pinturas.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_window_close;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(644, 289);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(160, 53);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "       Eliminar (F3)";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::Pinturas.Properties.Resources.Hopstarter_Soft_Scraps_Gear;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(644, 169);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 55);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "          Modificar (F2)";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Image = global::Pinturas.Properties.Resources.Mpt1st_Construction_Paint_bucket;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(644, 62);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 60);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "        Nuevo (F1)";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button1
             // 
             this.button1.Image = global::Pinturas.Properties.Resources.Graphicloads_Medical_Health_Equation;
@@ -398,6 +402,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "    Calcular";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormulaPresentacion
             // 

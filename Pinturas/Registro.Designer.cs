@@ -118,6 +118,8 @@
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(125, 22);
             this.txtcantidad.TabIndex = 5;
+            this.txtcantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtcantidad_KeyDown);
+            this.txtcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
             // label3
             // 
@@ -179,6 +181,9 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(353, 160);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // txtbusqueda
             // 
@@ -187,6 +192,8 @@
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(141, 22);
             this.txtbusqueda.TabIndex = 1;
+            this.txtbusqueda.TextChanged += new System.EventHandler(this.txtbusqueda_TextChanged);
+            this.txtbusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbusqueda_KeyDown);
             // 
             // combotinte
             // 
@@ -200,6 +207,8 @@
             this.combotinte.Name = "combotinte";
             this.combotinte.Size = new System.Drawing.Size(120, 24);
             this.combotinte.TabIndex = 0;
+            this.combotinte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.combotinte_KeyDown);
+            this.combotinte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combotinte_KeyPress);
             // 
             // Registro
             // 

@@ -119,7 +119,6 @@ namespace Pinturas
                     try
                     {
                         NuevaCant = Convert.ToDouble(Nuevo);
-
                         try
                         {
                             Conexion nueva = new Conexion();
@@ -148,16 +147,115 @@ namespace Pinturas
         {
             dataGridView1.Select();
         }
-    }
-}
-
-namespace Microsoft.VisualBasic
-{
-    class Interaction
-    {
-        internal static string InputBox(string v1, string v2, string v3)
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+            }
+            else if (e.KeyCode == Keys.F1)
+            {
+                if (Form1.EsAdmin)
+                    NuevoRegistro();
+            }
+            else if (e.KeyCode == Keys.F2)
+            {
+                if (Form1.EsAdmin)
+                {
+                    try
+                    {
+                        int pos = dataGridView1.CurrentRow.Index;
+                        Actualizar();
+                        dataGridView1.Rows[pos].Selected = true;
+                        ModificarRegistro(pos);
+                    }
+                    catch (Exception ex)
+                    { }
+
+                }
+
+            }
+            else if (e.KeyCode == Keys.F3)
+            {
+                if (Form1.EsAdmin)
+                {
+                    try
+                    {
+                        int pos = dataGridView1.CurrentRow.Index;
+                        Actualizar();
+                        dataGridView1.Rows[pos].Selected = true;
+                        EliminarRegistro(pos);
+                    }
+                    catch (Exception ex)
+                    { }
+                }
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int pos = dataGridView1.CurrentRow.Index;
+                Actualizar();
+                dataGridView1.Rows[pos].Selected = true;
+                EliminarRegistro(pos);
+            }
+            catch (Exception ex)
+            { }
+        }
+        void EliminarRegistro(int pos)
+        {
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Desea eliminar el Tinte (codigo " + dataGridView1.Rows[pos].Cells[0].Value.ToString() + ") seleccionado?", "Aviso", MessageBoxButtons.YesNo);
+                try
+                {
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        Conexion nueva = new Conexion();
+                        nueva.EjecutarQuery("delete from Asignacion where Id_presentacion=" + valor + " and Codigo_tinte='" + dataGridView1.Rows[pos].Cells[0].Value.ToString() + "' and Cantidad=" + dataGridView1.Rows[pos].Cells[2].Value.ToString());
+                        Actualizar();
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la eliminacion del tinte");
+                }
+            }
+            catch (Exception q)
+            {
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            calc();
+        }
+        void calc()
+        {
+            Conexion nueva = new Conexion();
+            double factor = 1;
+            double val = 1;
+            SqlDataReader valorN = nueva.Consulta("select Cantidad from Medida where Nombre='" + combo_formula.Text + "';");
+            if (valorN.Read())
+                val = Convert.ToDouble(valorN[0]);
+            double volumen = Convert.ToDouble(txtvolumen.Text);
+            factor = volumen / val;
+            nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", factor);
+
+            actualizarTotal();
+        }
+
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Actualizar();
+            actualizarTotal();
         }
     }
 }
+
