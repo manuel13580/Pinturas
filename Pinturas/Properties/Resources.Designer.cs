@@ -83,6 +83,26 @@ namespace Pinturas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete1 {
+            get {
+                object obj = ResourceManager.GetObject("delete1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete2 {
+            get {
+                object obj = ResourceManager.GetObject("delete2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Graphicloads_Medical_Health_Equation {
             get {
                 object obj = ResourceManager.GetObject("Graphicloads-Medical-Health-Equation", resourceCulture);
@@ -103,6 +123,16 @@ namespace Pinturas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icojam_Blue_Bits_Warning {
+            get {
+                object obj = ResourceManager.GetObject("Icojam-Blue-Bits-Warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mpt1st_Construction_Paint_bucket {
             get {
                 object obj = ResourceManager.GetObject("Mpt1st-Construction-Paint-bucket", resourceCulture);
@@ -116,6 +146,36 @@ namespace Pinturas.Properties {
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Actions_window_close {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Actions-window-close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Status_dialog_warning {
+            get {
+                object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Status-dialog-warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_plus {
+            get {
+                object obj = ResourceManager.GetObject("search_plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tick {
+            get {
+                object obj = ResourceManager.GetObject("tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
