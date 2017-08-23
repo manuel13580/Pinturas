@@ -25,6 +25,11 @@ namespace Pinturas
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            inicio();
+           
+        }
+
+        public bool inicio() {
 
             System.Globalization.CultureInfo.CreateSpecificCulture("en-US");
             opcionesToolStripMenuItem.Enabled = true;
@@ -35,6 +40,7 @@ namespace Pinturas
             TxtBusqueda2.Visible = false;
             TxtTipoBusqueda.Text = "Tipo de Auto";
             TxtTipoBusqueda.Visible = false;
+            return true;
         }
 
         private void presentacionToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -50,7 +56,7 @@ namespace Pinturas
             string consulta = "select p.Id_presentacion as \"Numero\", a.Marca as \"Tipo de Auto\", p.Codigo_color as \"Codigo de Color\", p.Descripcion as \"Descripcion\", p.Tamaño_Medida as \"Cantidad de Formula\", p.Completo as \"Estado de Formula\", p.Año_Inicial as \"Año Inicial \", p.Año_Final as \"Año Final \"  from Automovil a, Presentacion p where p.Id_auto=a.Id_auto;";
             nueva.LlenarGrid(consulta, dataGridView1, "Automovil");
         }
-        void llenarCombo()
+        public bool llenarCombo()
         {
             ComboAutos.Items.Clear();
             ComboAutos.Items.Add("");
@@ -59,7 +65,7 @@ namespace Pinturas
             while (autos.Read())
                 ComboAutos.Items.Add(autos[1].ToString());
 
-
+            return true;
         }
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -69,7 +75,7 @@ namespace Pinturas
                 rellenar();
             }
         }
-        void rellenar()
+        public bool rellenar()
         {
             FormulaPresentacion nuevo = new FormulaPresentacion();
             nuevo.valor = Int32.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
@@ -79,6 +85,7 @@ namespace Pinturas
             nuevo.Tamaño = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             nuevo.Estado = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             nuevo.Show();
+            return true;
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -58,7 +58,7 @@ namespace Pinturas
 
             Actualizar();
         }
-        void Actualizar()
+        public bool Actualizar()
         {
             combomedidas.Items.Clear();
             combo_formula.Items.Clear();
@@ -75,13 +75,19 @@ namespace Pinturas
             combomedidas.Text = this.Tamaño;
             nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", 1);
             actualizarTotal();
+            return true;
         }
-        void actualizarTotal()
+
+
+
+
+        public bool actualizarTotal()
         {
             double total = 0;
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 total = total + Convert.ToDouble(dataGridView1.Rows[i].Cells[2].Value.ToString());
             lbltotal.Text = "Total de la Formula: " + total + " (g).";
+            return true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -107,7 +113,9 @@ namespace Pinturas
             catch (Exception ex)
             { }
         }
-        void ModificarRegistro(int pos)
+
+
+        public bool ModificarRegistro(int pos)
         {
             try
             {
@@ -125,21 +133,27 @@ namespace Pinturas
                             if (Nuevo.Trim() != "")
                                 nueva.EjecutarQuery("update Asignacion set Cantidad=" + NuevaCant + " where Id_presentacion=" + valor + " and Codigo_tinte='" + dataGridView1.Rows[pos].Cells[0].Value.ToString() + "' and Cantidad=" + dataGridView1.Rows[pos].Cells[2].Value.ToString() + ";");
                             Actualizar();
+                            return true;
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message);
+                            return false;
                         }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error, Cantidad invalida");
+                        return false;
                     }
                 }
 
+                return true;
             }
             catch (Exception q)
-            { }
+            {
+                return false;
+            }
 
 
         }
@@ -205,7 +219,7 @@ namespace Pinturas
             catch (Exception ex)
             { }
         }
-        void EliminarRegistro(int pos)
+        public bool EliminarRegistro(int pos)
         {
             try
             {
@@ -224,10 +238,13 @@ namespace Pinturas
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error en la eliminacion del tinte");
+                    return false;
                 }
+                return true;
             }
             catch (Exception q)
             {
+                return false;
             }
 
         }
@@ -236,7 +253,7 @@ namespace Pinturas
         {
             calc();
         }
-        void calc()
+        public bool calc()
         {
             Conexion nueva = new Conexion();
             double factor = 1;
@@ -249,6 +266,7 @@ namespace Pinturas
             nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", factor);
 
             actualizarTotal();
+            return true;
         }
 
         private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
