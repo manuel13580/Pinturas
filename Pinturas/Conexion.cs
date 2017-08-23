@@ -9,9 +9,9 @@ using System.Data;
 using System.Windows.Forms;
 namespace Pinturas
 {
-    class Conexion
+    public class Conexion
     {
-        public void conectar()
+        public bool conectar()
         {
             SqlConnection conex;
             SqlCommand comm;
@@ -42,7 +42,10 @@ namespace Pinturas
             conex.Close();
             //dataGridView1.DataSource = ds;
             //dataGridView1.DataMember = "Automovil";
+            return true;
         }
+
+
         public SqlDataReader Consulta(string consulta)
         {
             SqlConnection conex = new SqlConnection();
@@ -56,7 +59,10 @@ namespace Pinturas
             // conex.Close();
             return rs;
         }
-        public void EjecutarQuery(string consulta)
+
+
+
+        public bool EjecutarQuery(string consulta)
         {
             SqlConnection conex = new SqlConnection();
             SqlCommand comm = new SqlCommand();
@@ -66,8 +72,12 @@ namespace Pinturas
             conex.Open();
             comm.ExecuteNonQuery();
             conex.Close();
+            return true;
         }
-        public void LlenarGrid(string consulta, DataGridView grid, string tabla)
+
+
+
+        public bool LlenarGrid(string consulta, DataGridView grid, string tabla)
         {
             try
             {
@@ -83,14 +93,18 @@ namespace Pinturas
                 grid.DataMember = tabla;
                 grid.Refresh();
                 conex.Close();
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo" + ex.Message);
+                return false;
             }
 
         }
-        public void LlenarGridFormula(string consulta, DataGridView grid, string tabla, double val)
+
+
+        public bool LlenarGridFormula(string consulta, DataGridView grid, string tabla, double val)
         {
             try
             {
@@ -108,13 +122,16 @@ namespace Pinturas
                 grid.Refresh();
                 conex.Close();
                 llenarCantidades(grid, val);
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo" + ex.Message);
+                return false;
             }
         }
-        void llenarCantidades(DataGridView grid, double val)
+
+        public bool llenarCantidades(DataGridView grid, double val)
         {
             try
             {
@@ -131,9 +148,14 @@ namespace Pinturas
                     acumulativo += Convert.ToDouble(grid.Rows[a].Cells[2].Value);
                     grid.Rows[a].Cells[3].Value = acumulativo.ToString();
                 }
+
+                return true;
             }
             catch (Exception ex)
-            { }
+            {
+
+                return false;
+            }
 
         }
     }

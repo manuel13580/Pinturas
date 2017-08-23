@@ -23,6 +23,12 @@ namespace Pinturas
 
         private void CrearFormula_Load(object sender, EventArgs e)
         {
+            cargaInicial();
+        }
+
+
+        public bool cargaInicial() {
+
             Conexion nueva = new Conexion();
             SqlDataReader autos = nueva.Consulta("select * from Automovil;");
             while (autos.Read())
@@ -39,10 +45,17 @@ namespace Pinturas
                 comboformula.Items.Add(formula[0].ToString());
                 comboformula.Text = formula[0].ToString();
             }
+
+            return true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            boton();
+        }
+
+        public bool boton() {
+
             if (comboautos.Text.Trim() != "" && comboformula.Text.Trim() != "" && txtdescripcion.Text.Trim() != "" && txtcodigo.Text != "Codigo Seleccionado")
             {
                 Conexion nueva = new Conexion();
@@ -58,19 +71,28 @@ namespace Pinturas
                         txtdescripcion.Text = "";
                         txtcodigo.Text = "";
                         comboautos.Select();
+                        return true;
                     }
                     catch
                     {
                         MessageBox.Show("Error de Datos");
+                        return false;
                     }
-
+                    
                 }
                 else
                 {
                     MessageBox.Show("Asegurese de marcar los datos Correspondientes");
+                    return false;
                 }
             }
+            else {
+
+                return false;
+            }
+
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
