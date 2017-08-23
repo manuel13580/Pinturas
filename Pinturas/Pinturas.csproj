@@ -126,5 +126,20 @@
   <ItemGroup>
     <None Include="imagenes\Oxygen-Icons.org-Oxygen-Actions-window-close.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\search_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\Icojam-Blue-Bits-Warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\Oxygen-Icons.org-Oxygen-Status-dialog-warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\select_by_color.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

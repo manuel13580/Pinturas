@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace Pinturas
         public Form1()
         {
             InitializeComponent();
+            TxtTipoBusqueda.Visible = false;
             Conexion nueva = new Conexion();
             string consulta = "select p.Id_presentacion as \"Numero\", a.Marca as \"Tipo de Auto\", p.Codigo_color as \"Codigo de Color\", p.Descripcion as \"Descripcion\", p.Tamaño_Medida as \"Cantidad de Formula\",  p.Completo as \"Estado de Formula\", p.Año_Inicial as \"Año Inicial \", p.Año_Final as \"Año Final \"  from Automovil a, Presentacion p where p.Id_auto=a.Id_auto;";
             nueva.LlenarGrid(consulta, dataGridView1, "Automovil");
@@ -25,14 +27,14 @@ namespace Pinturas
         {
 
             System.Globalization.CultureInfo.CreateSpecificCulture("en-US");
-            System.Globalization.CultureInfo.CreateSpecificCulture("en-US");
-            if (!Form1.EsAdmin)
-            {
-                opcionesToolStripMenuItem.Enabled = false;
-                mostrarToolStripMenuItem.Enabled = false;
-                opcionesToolStripMenuItem.Visible = false;
-                mostrarToolStripMenuItem.Visible = false;
-            }
+            opcionesToolStripMenuItem.Enabled = true;
+            mostrarToolStripMenuItem.Enabled = true;
+            opcionesToolStripMenuItem.Visible = true;
+            mostrarToolStripMenuItem.Visible = true;
+            llenarCombo();
+            TxtBusqueda2.Visible = false;
+            TxtTipoBusqueda.Text = "Tipo de Auto";
+            TxtTipoBusqueda.Visible = false;
         }
 
         private void presentacionToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -43,9 +45,21 @@ namespace Pinturas
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            llenarCombo();
             Conexion nueva = new Conexion();
             string consulta = "select p.Id_presentacion as \"Numero\", a.Marca as \"Tipo de Auto\", p.Codigo_color as \"Codigo de Color\", p.Descripcion as \"Descripcion\", p.Tamaño_Medida as \"Cantidad de Formula\", p.Completo as \"Estado de Formula\", p.Año_Inicial as \"Año Inicial \", p.Año_Final as \"Año Final \"  from Automovil a, Presentacion p where p.Id_auto=a.Id_auto;";
             nueva.LlenarGrid(consulta, dataGridView1, "Automovil");
+        }
+        void llenarCombo()
+        {
+            ComboAutos.Items.Clear();
+            ComboAutos.Items.Add("");
+            Conexion nueva = new Conexion();
+            SqlDataReader autos = nueva.Consulta("select * from Automovil;");
+            while (autos.Read())
+                ComboAutos.Items.Add(autos[1].ToString());
+
+
         }
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -77,6 +91,45 @@ namespace Pinturas
         private void dataGridView1_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
             dataGridView1.Select();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Conexion nueva = new Conexion();
+            string consulta = "";
+
+            consulta = "select p.Id_presentacion as \"Numero\",  a.Marca as \"Tipo de Auto\", p.Codigo_color as \"Codigo de Color\", p.Descripcion as \"Descripcion\", p.Tamaño_Medida as \"Cantidad de Formula\", p.Completo as \"Estado de Formula\", p.Año_Inicial as \"Año Inicial \", p.Año_Final as \"Año Final \"  from Automovil a, Presentacion p where p.Id_auto=a.Id_auto and a.Marca like '%" + ComboAutos.Text + "%' and p.Codigo_color like '%" + TxtBusqueda.Text + "%' and p.Descripcion like '%" + txtdescr.Text + "%' and p.Año_Inicial like '%" + txtaño.Text + "%'";
+
+            nueva.LlenarGrid(consulta, dataGridView1, "Automovil");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtaño.Text = "";
+            TxtBusqueda.Text = "";
+            txtdescr.Text = "";
+            ComboAutos.Text = "";
+        }
+
+        private void presentacionesTerminadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Conexion nueva = new Conexion();
+            string consulta = "select p.Id_presentacion as \"Numero\", a.Marca as \"Tipo de Auto\", p.Codigo_color as \"Codigo de Color\", p.Descripcion as \"Descripcion\", p.Tamaño_Medida as \"Cantidad de Formula\", p.Completo as \"Estado de Formula\", p.Año_Inicial as \"Año Inicial \", p.Año_Final as \"Año Final \"  from Automovil a, Presentacion p where p.Id_auto=a.Id_auto and p.Completo='Completa';";
+            nueva.LlenarGrid(consulta, dataGridView1, "Automovil");
+        }
+
+        private void presentacionesNoTerminadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Conexion nueva = new Conexion();
+            string consulta = "select p.Id_presentacion as \"Numero\", a.Marca as \"Tipo de Auto\", p.Codigo_color as \"Codigo de Color\", p.Descripcion as \"Descripcion\", p.Tamaño_Medida as \"Cantidad de Formula\", p.Completo as \"Estado de Formula\", p.Año_Inicial as \"Año Inicial \", p.Año_Final as \"Año Final \"  from Automovil a, Presentacion p where p.Id_auto=a.Id_auto and p.Completo='Incompleta';";
+            nueva.LlenarGrid(consulta, dataGridView1, "Automovil");
+        }
+
+        private void faltanDetallesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Conexion nueva = new Conexion();
+            string consulta = "select p.Id_presentacion as \"Numero\", a.Marca as \"Tipo de Auto\", p.Codigo_color as \"Codigo de Color\", p.Descripcion as \"Descripcion\", p.Tamaño_Medida as \"Cantidad de Formula\", p.Completo as \"Estado de Formula\", p.Año_Inicial as \"Año Inicial \", p.Año_Final as \"Año Final \"  from Automovil a, Presentacion p where p.Id_auto=a.Id_auto and p.Completo='Sin datos';";
+            nueva.LlenarGrid(consulta, dataGridView1, "Automovil");
         }
     }
 }

@@ -53,7 +53,7 @@ namespace Pinturas
                         int id_auto = ListaCodigosAuto.ElementAt(comboautos.SelectedIndex);
                         string id_color = txtcodigo.Text;
                         string des = txtdescripcion.Text;
-                        nueva.EjecutarQuery("insert into Presentacion(Id_auto,Codigo_color,Descripcion,Completo,Tamaño_Medida) values (" + id_auto + ",'" + id_color + "','" + des + "','Sin datos','" + comboformula.Text + "');");
+                        nueva.EjecutarQuery("insert into Presentacion(Id_auto,Codigo_color,Descripcion,Completo,Tamaño_Medida,Año_Inicial,Año_Final) values (" + id_auto + ",'" + id_color + "','" + des + "','Sin datos','" + comboformula.Text + "',0,0);");
                         MessageBox.Show("Nueva Formula Registrada Correctamente");
                         txtdescripcion.Text = "";
                         txtcodigo.Text = "";

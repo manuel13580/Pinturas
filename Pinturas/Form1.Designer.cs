@@ -33,11 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tinteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.presentacionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sinDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,11 +44,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ComboAutos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.TxtBusqueda2 = new System.Windows.Forms.TextBox();
+            this.TxtTipoBusqueda = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tinteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.presentacionesTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presentacionesNoTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faltanDetallesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sinDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -79,23 +81,11 @@
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.opcionesToolStripMenuItem.Text = "Datos";
             // 
-            // nuevoToolStripMenuItem
-            // 
-            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
-            this.nuevoToolStripMenuItem.Text = "Actualizar";
-            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
-            // 
-            // tinteToolStripMenuItem1
-            // 
-            this.tinteToolStripMenuItem1.Name = "tinteToolStripMenuItem1";
-            this.tinteToolStripMenuItem1.Size = new System.Drawing.Size(150, 26);
-            this.tinteToolStripMenuItem1.Text = "Tinte";
-            // 
             // presentacionToolStripMenuItem1
             // 
+            this.presentacionToolStripMenuItem1.Image = global::Pinturas.Properties.Resources.Graphicloads_Medical_Health_Equation;
             this.presentacionToolStripMenuItem1.Name = "presentacionToolStripMenuItem1";
-            this.presentacionToolStripMenuItem1.Size = new System.Drawing.Size(150, 26);
+            this.presentacionToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
             this.presentacionToolStripMenuItem1.Text = "Formula";
             this.presentacionToolStripMenuItem1.Click += new System.EventHandler(this.presentacionToolStripMenuItem1_Click);
             // 
@@ -109,13 +99,6 @@
             this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
             this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.mostrarToolStripMenuItem.Text = "Mostrar";
-            // 
-            // sinDatosToolStripMenuItem
-            // 
-            this.sinDatosToolStripMenuItem.Image = global::Pinturas.Properties.Resources.Oxygen_Icons_org_Oxygen_Status_dialog_warning;
-            this.sinDatosToolStripMenuItem.Name = "sinDatosToolStripMenuItem";
-            this.sinDatosToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
-            this.sinDatosToolStripMenuItem.Text = "Formulas Sin datos";
             // 
             // dataGridView1
             // 
@@ -135,7 +118,7 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(295, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(294, 77);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -236,6 +219,28 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Codigo";
             // 
+            // TxtBusqueda2
+            // 
+            this.TxtBusqueda2.Location = new System.Drawing.Point(1029, 34);
+            this.TxtBusqueda2.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtBusqueda2.Name = "TxtBusqueda2";
+            this.TxtBusqueda2.Size = new System.Drawing.Size(255, 22);
+            this.TxtBusqueda2.TabIndex = 27;
+            // 
+            // TxtTipoBusqueda
+            // 
+            this.TxtTipoBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TxtTipoBusqueda.FormattingEnabled = true;
+            this.TxtTipoBusqueda.Items.AddRange(new object[] {
+            "Tipo de Auto",
+            "Codigo de Color",
+            "Descripcion"});
+            this.TxtTipoBusqueda.Location = new System.Drawing.Point(384, 32);
+            this.TxtTipoBusqueda.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtTipoBusqueda.Name = "TxtTipoBusqueda";
+            this.TxtTipoBusqueda.Size = new System.Drawing.Size(160, 24);
+            this.TxtTipoBusqueda.TabIndex = 26;
+            // 
             // button2
             // 
             this.button2.Image = global::Pinturas.Properties.Resources.delete1;
@@ -247,6 +252,7 @@
             this.button2.TabIndex = 24;
             this.button2.Text = "      Limpiar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -259,6 +265,22 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "   Buscar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // nuevoToolStripMenuItem
+            // 
+            this.nuevoToolStripMenuItem.Image = global::Pinturas.Properties.Resources.tick;
+            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.nuevoToolStripMenuItem.Text = "Actualizar";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
+            // 
+            // tinteToolStripMenuItem1
+            // 
+            this.tinteToolStripMenuItem1.Image = global::Pinturas.Properties.Resources.select_by_color;
+            this.tinteToolStripMenuItem1.Name = "tinteToolStripMenuItem1";
+            this.tinteToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.tinteToolStripMenuItem1.Text = "Tinte";
             // 
             // presentacionesTerminadasToolStripMenuItem
             // 
@@ -266,6 +288,7 @@
             this.presentacionesTerminadasToolStripMenuItem.Name = "presentacionesTerminadasToolStripMenuItem";
             this.presentacionesTerminadasToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
             this.presentacionesTerminadasToolStripMenuItem.Text = "Formulas Completas";
+            this.presentacionesTerminadasToolStripMenuItem.Click += new System.EventHandler(this.presentacionesTerminadasToolStripMenuItem_Click);
             // 
             // presentacionesNoTerminadasToolStripMenuItem
             // 
@@ -273,6 +296,7 @@
             this.presentacionesNoTerminadasToolStripMenuItem.Name = "presentacionesNoTerminadasToolStripMenuItem";
             this.presentacionesNoTerminadasToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
             this.presentacionesNoTerminadasToolStripMenuItem.Text = "Formulas Incompletas";
+            this.presentacionesNoTerminadasToolStripMenuItem.Click += new System.EventHandler(this.presentacionesNoTerminadasToolStripMenuItem_Click);
             // 
             // faltanDetallesToolStripMenuItem
             // 
@@ -280,12 +304,22 @@
             this.faltanDetallesToolStripMenuItem.Name = "faltanDetallesToolStripMenuItem";
             this.faltanDetallesToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
             this.faltanDetallesToolStripMenuItem.Text = "Formulas con Falta de detalles";
+            this.faltanDetallesToolStripMenuItem.Click += new System.EventHandler(this.faltanDetallesToolStripMenuItem_Click);
+            // 
+            // sinDatosToolStripMenuItem
+            // 
+            this.sinDatosToolStripMenuItem.Image = global::Pinturas.Properties.Resources.Oxygen_Icons_org_Oxygen_Status_dialog_warning;
+            this.sinDatosToolStripMenuItem.Name = "sinDatosToolStripMenuItem";
+            this.sinDatosToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
+            this.sinDatosToolStripMenuItem.Text = "Formulas Sin datos";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1470, 753);
+            this.Controls.Add(this.TxtBusqueda2);
+            this.Controls.Add(this.TxtTipoBusqueda);
             this.Controls.Add(this.TxtBusqueda);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -332,6 +366,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox ComboAutos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TxtBusqueda2;
+        private System.Windows.Forms.ComboBox TxtTipoBusqueda;
     }
 }
 
