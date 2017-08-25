@@ -138,5 +138,11 @@ namespace Pinturas
             string consulta = "select p.Id_presentacion as \"Numero\", a.Marca as \"Tipo de Auto\", p.Codigo_color as \"Codigo de Color\", p.Descripcion as \"Descripcion\", p.Tamaño_Medida as \"Cantidad de Formula\", p.Completo as \"Estado de Formula\", p.Año_Inicial as \"Año Inicial \", p.Año_Final as \"Año Final \"  from Automovil a, Presentacion p where p.Id_auto=a.Id_auto and p.Completo='Sin datos';";
             nueva.LlenarGrid(consulta, dataGridView1, "Automovil");
         }
+
+        private void tinteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Tintes nuevo = new Tintes();
+            nuevo.Show();
+        }
     }
 }
