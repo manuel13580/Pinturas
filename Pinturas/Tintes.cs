@@ -13,7 +13,7 @@ namespace Pinturas
 {
     public partial class Tintes : Form
     {
-        SqlConnection cn;
+       
         SqlCommand cmd;
         SqlDataReader dr;
         public Tintes()
@@ -24,33 +24,34 @@ namespace Pinturas
         private void button1_Click(object sender, EventArgs e)
         {
             bool registro = registrar_Tinte(Convert.ToString(txtcodigo.Text), Convert.ToString(txtnombre.Text),
-                                           Convert.ToString(txtmonocapa.Text), Convert.ToInt32(textrgb.Text));
+                                           Convert.ToString(txtmonocapa.Text), Convert.ToString(textrgb.Text));
         }
-        public bool registrar_Tinte(string codigo, string nombre, string mono_capa, int rgb)
+        public bool registrar_Tinte(string codigo, string nombre, string mono_capa, string rgb)
         {
-
+            bool respuesta = false;
+            Conexion nueva = new Conexion();
             try
-
             {
-
-                cmd = new SqlCommand("INSERT INTO TINTE(Codigo,Nombre,Mono_Capa,Rgb)" +
-                                     " values('" + codigo + "','" + nombre + "','" + mono_capa + "'," + rgb + ")", cn);
-                cmd.ExecuteNonQuery();
-                cmd.ExecuteNonQuery();
-                cn.Close();
-                return true;
-
-
+                if (txtcodigo.Text.Trim() != "" && txtnombre.Text.Trim() != "")
+                {
+                    nueva.EjecutarQuery("INSERT INTO TINTE(Codigo_Tinte,Nombre,MonoCapa,RGB)" +
+                                     " values('" + codigo + "','" + nombre + "','" + mono_capa + "','" + rgb + "')");
+                    txtcodigo.Text = "";
+                    txtnombre.Text = "";
+                    txtmonocapa.Text = "";
+                    MessageBox.Show("Tinte Registrado");
+                    txtcodigo.Select();
+                    respuesta = true;
+                }
 
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("No se inserto Por :  " + ex.ToString());
-                return false;
-
+                MessageBox.Show("No se pudo realizar la insercion " + ex.ToString());
+                txtcodigo.Select();
+                respuesta = false;
             }
-
+            return respuesta;
         }
 
     }
