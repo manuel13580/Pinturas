@@ -54,5 +54,9 @@ namespace Pinturas
             return respuesta;
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

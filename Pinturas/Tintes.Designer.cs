@@ -46,6 +46,8 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textPrecio = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -58,18 +60,21 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(62, 249);
+            this.groupBox2.Location = new System.Drawing.Point(558, 31);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(520, 298);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(693, 367);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Listado Total de Tintes Disponibles";
             // 
             // txtbusqueda
             // 
-            this.txtbusqueda.Location = new System.Drawing.Point(208, 34);
+            this.txtbusqueda.Location = new System.Drawing.Point(277, 42);
+            this.txtbusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbusqueda.Name = "txtbusqueda";
-            this.txtbusqueda.Size = new System.Drawing.Size(86, 19);
+            this.txtbusqueda.Size = new System.Drawing.Size(113, 22);
             this.txtbusqueda.TabIndex = 8;
             // 
             // comboTipoBusqueda
@@ -81,17 +86,19 @@
             "Nombre",
             "RGB",
             "MonoCapa"});
-            this.comboTipoBusqueda.Location = new System.Drawing.Point(98, 34);
+            this.comboTipoBusqueda.Location = new System.Drawing.Point(131, 42);
+            this.comboTipoBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboTipoBusqueda.Name = "comboTipoBusqueda";
-            this.comboTipoBusqueda.Size = new System.Drawing.Size(94, 21);
+            this.comboTipoBusqueda.Size = new System.Drawing.Size(124, 24);
             this.comboTipoBusqueda.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 34);
+            this.label3.Location = new System.Drawing.Point(8, 42);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.Size = new System.Drawing.Size(115, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Busqueda Por:";
             // 
@@ -103,16 +110,19 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 58);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 71);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(487, 233);
+            this.dataGridView1.Size = new System.Drawing.Size(649, 287);
             this.dataGridView1.TabIndex = 5;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textPrecio);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textrgb);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtmonocapa);
@@ -125,45 +135,48 @@
             this.groupBox1.Controls.Add(this.txtcodigo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(62, 16);
+            this.groupBox1.Location = new System.Drawing.Point(13, 19);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(520, 227);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(518, 379);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Tinte";
             // 
             // textrgb
             // 
-            this.textrgb.Location = new System.Drawing.Point(98, 158);
-            this.textrgb.Margin = new System.Windows.Forms.Padding(2);
+            this.textrgb.Location = new System.Drawing.Point(131, 194);
+            this.textrgb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textrgb.Name = "textrgb";
-            this.textrgb.Size = new System.Drawing.Size(139, 19);
+            this.textrgb.Size = new System.Drawing.Size(184, 22);
             this.textrgb.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 158);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(29, 194);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(47, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "Rgb :";
             // 
             // txtmonocapa
             // 
-            this.txtmonocapa.Location = new System.Drawing.Point(98, 112);
+            this.txtmonocapa.Location = new System.Drawing.Point(131, 138);
+            this.txtmonocapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtmonocapa.MaxLength = 10;
             this.txtmonocapa.Name = "txtmonocapa";
-            this.txtmonocapa.Size = new System.Drawing.Size(139, 19);
+            this.txtmonocapa.Size = new System.Drawing.Size(184, 22);
             this.txtmonocapa.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 116);
+            this.label4.Location = new System.Drawing.Point(29, 143);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.Size = new System.Drawing.Size(99, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Mono Capa :";
             // 
@@ -172,9 +185,10 @@
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(342, 158);
+            this.button3.Location = new System.Drawing.Point(339, 195);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 49);
+            this.button3.Size = new System.Drawing.Size(155, 60);
             this.button3.TabIndex = 6;
             this.button3.Text = "      Eliminar";
             this.button3.UseVisualStyleBackColor = true;
@@ -184,9 +198,10 @@
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(342, 93);
+            this.button2.Location = new System.Drawing.Point(339, 115);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 53);
+            this.button2.Size = new System.Drawing.Size(155, 65);
             this.button2.TabIndex = 5;
             this.button2.Text = "        Cambiar";
             this.button2.UseVisualStyleBackColor = true;
@@ -197,9 +212,10 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(342, 16);
+            this.button1.Location = new System.Drawing.Point(339, 21);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 53);
+            this.button1.Size = new System.Drawing.Size(155, 65);
             this.button1.TabIndex = 4;
             this.button1.Text = "        Registrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -208,43 +224,66 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 37);
+            this.label1.Location = new System.Drawing.Point(29, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(63, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo:";
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(98, 72);
+            this.txtnombre.Location = new System.Drawing.Point(131, 89);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnombre.MaxLength = 60;
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(139, 19);
+            this.txtnombre.Size = new System.Drawing.Size(184, 22);
             this.txtnombre.TabIndex = 3;
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(98, 33);
+            this.txtcodigo.Location = new System.Drawing.Point(131, 41);
+            this.txtcodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(139, 19);
+            this.txtcodigo.Size = new System.Drawing.Size(184, 22);
             this.txtcodigo.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 76);
+            this.label2.Location = new System.Drawing.Point(29, 94);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 254);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Precio :";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // textPrecio
+            // 
+            this.textPrecio.Location = new System.Drawing.Point(131, 249);
+            this.textPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textPrecio.Name = "textPrecio";
+            this.textPrecio.Size = new System.Drawing.Size(184, 22);
+            this.textPrecio.TabIndex = 12;
+            // 
             // Tintes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 556);
+            this.ClientSize = new System.Drawing.Size(1282, 434);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Tintes";
             this.Text = "Tintes";
             this.groupBox2.ResumeLayout(false);
@@ -275,5 +314,7 @@
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textPrecio;
     }
 }
