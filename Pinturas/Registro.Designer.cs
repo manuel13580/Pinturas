@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.lblnombre = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblcodigo = new System.Windows.Forms.Label();
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +39,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtbusqueda = new System.Windows.Forms.TextBox();
             this.combotinte = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,19 +65,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Tinte Seleccionado";
             // 
-            // button2
-            // 
-            this.button2.Image = global::Pinturas.Properties.Resources.delete;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(207, 145);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 53);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "          Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
@@ -87,19 +74,6 @@
             this.lblnombre.Size = new System.Drawing.Size(28, 17);
             this.lblnombre.TabIndex = 3;
             this.lblnombre.Text = "****";
-            // 
-            // button1
-            // 
-            this.button1.Image = global::Pinturas.Properties.Resources.add1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(52, 145);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 53);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "          Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblcodigo
             // 
@@ -207,8 +181,35 @@
             this.combotinte.Name = "combotinte";
             this.combotinte.Size = new System.Drawing.Size(120, 24);
             this.combotinte.TabIndex = 0;
+            this.combotinte.SelectedIndexChanged += new System.EventHandler(this.combotinte_SelectedIndexChanged);
             this.combotinte.KeyDown += new System.Windows.Forms.KeyEventHandler(this.combotinte_KeyDown);
             this.combotinte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combotinte_KeyPress);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::Pinturas.Properties.Resources.delete;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(207, 145);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 53);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "          Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::Pinturas.Properties.Resources.add1;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(52, 145);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 53);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "          Aceptar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Registro
             // 

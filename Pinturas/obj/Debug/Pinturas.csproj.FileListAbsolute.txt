@@ -52,3 +52,4 @@ C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas
 C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.GenerateResource.Cache
 C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.exe
 C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.pdb
+C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.RegistrarVehiculo.resources

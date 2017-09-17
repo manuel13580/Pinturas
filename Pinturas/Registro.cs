@@ -149,5 +149,9 @@ namespace Pinturas
             }
         }
 
+        private void combotinte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
