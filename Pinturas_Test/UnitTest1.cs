@@ -132,9 +132,28 @@ namespace Pinturas_Test
 
         }
 
+        [TestMethod()]
+        public void iniciar_verificacionTest()
+        {
+            Tintes a = new Tintes();
+            Assert.AreEqual(true, a.iniciar_verificacion());
+        }
 
+        
 
+        [TestMethod()]
+        public void registrar_TinteTest()
+        {
+            Tinte a = new Tinte();
+            Assert.AreEqual(true, a.registrar_Tinte("codIGUITO", "nomb", "mono", "rgb", "pre"));
+        }
 
+        [TestMethod()]
+        public void validar_camposTest()
+        {
+            Tinte a = new Tinte();
+            Assert.AreEqual(true, a.validar_campos("cod", "nomb", "mono", "rgb", "pre"));
+        }
 
 
     }

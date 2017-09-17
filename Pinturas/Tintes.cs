@@ -19,41 +19,33 @@ namespace Pinturas
         public Tintes()
         {
             InitializeComponent();
+
+
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool registro = registrar_Tinte(Convert.ToString(txtcodigo.Text), Convert.ToString(txtnombre.Text),
-                                           Convert.ToString(txtmonocapa.Text), Convert.ToString(textrgb.Text),Convert.ToString(textPrecio.Text));
+           bool ver = iniciar_verificacion();
         }
 
-        public bool registrar_Tinte(string codigo, string nombre, string mono_capa, string rgb, string Precio)
-        {
-            bool respuesta = false;
-            Conexion nueva = new Conexion();
-            try
-            {
-                if (txtcodigo.Text.Trim() != "" && txtnombre.Text.Trim() != "")
-                {
-                    nueva.EjecutarQuery("INSERT INTO TINTE(Codigo_Tinte,Nombre,MonoCapa,RGB,Precio)" +
-                                     " values('" + codigo + "','" + nombre + "','" + mono_capa + "','" + rgb + "','" + Precio + "')");
-                    txtcodigo.Text = "";
-                    txtnombre.Text = "";
-                    txtmonocapa.Text = "";
-                    MessageBox.Show("Tinte Registrado");
-                    txtcodigo.Select();
-                    respuesta = true;
-                }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo realizar la insercion " + ex.ToString());
-                txtcodigo.Select();
-                respuesta = false;
-            }
-            return respuesta;
+        public bool iniciar_verificacion() {
+            Tinte t = new Tinte();
+            bool val = t.validar_campos(Convert.ToString(txtcodigo.Text), Convert.ToString(txtnombre.Text),
+                       Convert.ToString(txtmonocapa.Text), Convert.ToString(textrgb.Text), Convert.ToString(textPrecio.Text));
+            txtcodigo.Text = "";
+            txtnombre.Text = "";
+            txtmonocapa.Text = "";
+            textPrecio.Text = "";
+            txtcodigo.Select();
+            return true;
+
+
         }
+
 
         private void label6_Click(object sender, EventArgs e)
         {
