@@ -73,6 +73,7 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tinte.cs" />
     <Compile Include="Tintes.cs">
       <SubType>Form</SubType>
     </Compile>

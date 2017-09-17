@@ -24,9 +24,10 @@ namespace Pinturas
         private void button1_Click(object sender, EventArgs e)
         {
             bool registro = registrar_Tinte(Convert.ToString(txtcodigo.Text), Convert.ToString(txtnombre.Text),
-                                           Convert.ToString(txtmonocapa.Text), Convert.ToString(textrgb.Text));
+                                           Convert.ToString(txtmonocapa.Text), Convert.ToString(textrgb.Text),Convert.ToString(textPrecio.Text));
         }
-        public bool registrar_Tinte(string codigo, string nombre, string mono_capa, string rgb)
+
+        public bool registrar_Tinte(string codigo, string nombre, string mono_capa, string rgb, string Precio)
         {
             bool respuesta = false;
             Conexion nueva = new Conexion();
@@ -34,8 +35,8 @@ namespace Pinturas
             {
                 if (txtcodigo.Text.Trim() != "" && txtnombre.Text.Trim() != "")
                 {
-                    nueva.EjecutarQuery("INSERT INTO TINTE(Codigo_Tinte,Nombre,MonoCapa,RGB)" +
-                                     " values('" + codigo + "','" + nombre + "','" + mono_capa + "','" + rgb + "')");
+                    nueva.EjecutarQuery("INSERT INTO TINTE(Codigo_Tinte,Nombre,MonoCapa,RGB,Precio)" +
+                                     " values('" + codigo + "','" + nombre + "','" + mono_capa + "','" + rgb + "','" + Precio + "')");
                     txtcodigo.Text = "";
                     txtnombre.Text = "";
                     txtmonocapa.Text = "";
