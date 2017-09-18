@@ -29,6 +29,8 @@ namespace Pinturas
         private void button1_Click(object sender, EventArgs e)
         {
            bool ver = iniciar_verificacion();
+            Conexion c = new Conexion();
+            c.llenarGridViewTintes(dgvTintes);
         }
 
 
@@ -48,6 +50,21 @@ namespace Pinturas
 
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboTipoBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnombre_TextChanged(object sender, EventArgs e)
         {
 
         }

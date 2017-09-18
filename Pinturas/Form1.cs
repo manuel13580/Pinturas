@@ -144,5 +144,16 @@ namespace Pinturas
             Tintes nuevo = new Tintes();
             nuevo.Show();
         }
+
+        private void vehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void registrarVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistrarVehiculo form = new RegistrarVehiculo();
+            form.Show();
+        }
     }
 }

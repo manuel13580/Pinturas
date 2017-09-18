@@ -28,19 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tinteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.presentacionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.presentacionesTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.presentacionesNoTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.faltanDetallesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sinDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,6 +47,16 @@
             this.TxtTipoBusqueda = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tinteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.presentacionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.presentacionesTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.presentacionesNoTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faltanDetallesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sinDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -76,34 +79,11 @@
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem,
             this.tinteToolStripMenuItem1,
-            this.presentacionToolStripMenuItem1});
+            this.presentacionToolStripMenuItem1,
+            this.vehiculosToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.opcionesToolStripMenuItem.Text = "Datos";
-            // 
-            // nuevoToolStripMenuItem
-            // 
-            this.nuevoToolStripMenuItem.Image = global::Pinturas.Properties.Resources.tick;
-            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.nuevoToolStripMenuItem.Text = "Actualizar";
-            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
-            // 
-            // tinteToolStripMenuItem1
-            // 
-            this.tinteToolStripMenuItem1.Image = global::Pinturas.Properties.Resources.select_by_color;
-            this.tinteToolStripMenuItem1.Name = "tinteToolStripMenuItem1";
-            this.tinteToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
-            this.tinteToolStripMenuItem1.Text = "Tinte";
-            this.tinteToolStripMenuItem1.Click += new System.EventHandler(this.tinteToolStripMenuItem1_Click);
-            // 
-            // presentacionToolStripMenuItem1
-            // 
-            this.presentacionToolStripMenuItem1.Image = global::Pinturas.Properties.Resources.Graphicloads_Medical_Health_Equation;
-            this.presentacionToolStripMenuItem1.Name = "presentacionToolStripMenuItem1";
-            this.presentacionToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
-            this.presentacionToolStripMenuItem1.Text = "Formula";
-            this.presentacionToolStripMenuItem1.Click += new System.EventHandler(this.presentacionToolStripMenuItem1_Click);
             // 
             // mostrarToolStripMenuItem
             // 
@@ -116,37 +96,6 @@
             this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.mostrarToolStripMenuItem.Text = "Mostrar";
             // 
-            // presentacionesTerminadasToolStripMenuItem
-            // 
-            this.presentacionesTerminadasToolStripMenuItem.Image = global::Pinturas.Properties.Resources.tick;
-            this.presentacionesTerminadasToolStripMenuItem.Name = "presentacionesTerminadasToolStripMenuItem";
-            this.presentacionesTerminadasToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
-            this.presentacionesTerminadasToolStripMenuItem.Text = "Formulas Completas";
-            this.presentacionesTerminadasToolStripMenuItem.Click += new System.EventHandler(this.presentacionesTerminadasToolStripMenuItem_Click);
-            // 
-            // presentacionesNoTerminadasToolStripMenuItem
-            // 
-            this.presentacionesNoTerminadasToolStripMenuItem.Image = global::Pinturas.Properties.Resources.delete2;
-            this.presentacionesNoTerminadasToolStripMenuItem.Name = "presentacionesNoTerminadasToolStripMenuItem";
-            this.presentacionesNoTerminadasToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
-            this.presentacionesNoTerminadasToolStripMenuItem.Text = "Formulas Incompletas";
-            this.presentacionesNoTerminadasToolStripMenuItem.Click += new System.EventHandler(this.presentacionesNoTerminadasToolStripMenuItem_Click);
-            // 
-            // faltanDetallesToolStripMenuItem
-            // 
-            this.faltanDetallesToolStripMenuItem.Image = global::Pinturas.Properties.Resources.Icojam_Blue_Bits_Warning;
-            this.faltanDetallesToolStripMenuItem.Name = "faltanDetallesToolStripMenuItem";
-            this.faltanDetallesToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
-            this.faltanDetallesToolStripMenuItem.Text = "Formulas con Falta de detalles";
-            this.faltanDetallesToolStripMenuItem.Click += new System.EventHandler(this.faltanDetallesToolStripMenuItem_Click);
-            // 
-            // sinDatosToolStripMenuItem
-            // 
-            this.sinDatosToolStripMenuItem.Image = global::Pinturas.Properties.Resources.Oxygen_Icons_org_Oxygen_Status_dialog_warning;
-            this.sinDatosToolStripMenuItem.Name = "sinDatosToolStripMenuItem";
-            this.sinDatosToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
-            this.sinDatosToolStripMenuItem.Text = "Formulas Sin datos";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -155,14 +104,14 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(294, 77);
@@ -171,16 +120,16 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1148, 623);
             this.dataGridView1.TabIndex = 6;
@@ -314,6 +263,85 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // nuevoToolStripMenuItem
+            // 
+            this.nuevoToolStripMenuItem.Image = global::Pinturas.Properties.Resources.tick;
+            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.nuevoToolStripMenuItem.Text = "Actualizar";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
+            // 
+            // tinteToolStripMenuItem1
+            // 
+            this.tinteToolStripMenuItem1.Image = global::Pinturas.Properties.Resources.select_by_color;
+            this.tinteToolStripMenuItem1.Name = "tinteToolStripMenuItem1";
+            this.tinteToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.tinteToolStripMenuItem1.Text = "Tinte";
+            this.tinteToolStripMenuItem1.Click += new System.EventHandler(this.tinteToolStripMenuItem1_Click);
+            // 
+            // presentacionToolStripMenuItem1
+            // 
+            this.presentacionToolStripMenuItem1.Image = global::Pinturas.Properties.Resources.Graphicloads_Medical_Health_Equation;
+            this.presentacionToolStripMenuItem1.Name = "presentacionToolStripMenuItem1";
+            this.presentacionToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.presentacionToolStripMenuItem1.Text = "Formula";
+            this.presentacionToolStripMenuItem1.Click += new System.EventHandler(this.presentacionToolStripMenuItem1_Click);
+            // 
+            // vehiculosToolStripMenuItem
+            // 
+            this.vehiculosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarVehiculoToolStripMenuItem,
+            this.buscarVehiculoToolStripMenuItem});
+            this.vehiculosToolStripMenuItem.Image = global::Pinturas.Properties.Resources.vehiculo1;
+            this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
+            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.vehiculosToolStripMenuItem.Text = "Vehiculos ";
+            this.vehiculosToolStripMenuItem.Click += new System.EventHandler(this.vehiculosToolStripMenuItem_Click);
+            // 
+            // presentacionesTerminadasToolStripMenuItem
+            // 
+            this.presentacionesTerminadasToolStripMenuItem.Image = global::Pinturas.Properties.Resources.tick;
+            this.presentacionesTerminadasToolStripMenuItem.Name = "presentacionesTerminadasToolStripMenuItem";
+            this.presentacionesTerminadasToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
+            this.presentacionesTerminadasToolStripMenuItem.Text = "Formulas Completas";
+            this.presentacionesTerminadasToolStripMenuItem.Click += new System.EventHandler(this.presentacionesTerminadasToolStripMenuItem_Click);
+            // 
+            // presentacionesNoTerminadasToolStripMenuItem
+            // 
+            this.presentacionesNoTerminadasToolStripMenuItem.Image = global::Pinturas.Properties.Resources.delete2;
+            this.presentacionesNoTerminadasToolStripMenuItem.Name = "presentacionesNoTerminadasToolStripMenuItem";
+            this.presentacionesNoTerminadasToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
+            this.presentacionesNoTerminadasToolStripMenuItem.Text = "Formulas Incompletas";
+            this.presentacionesNoTerminadasToolStripMenuItem.Click += new System.EventHandler(this.presentacionesNoTerminadasToolStripMenuItem_Click);
+            // 
+            // faltanDetallesToolStripMenuItem
+            // 
+            this.faltanDetallesToolStripMenuItem.Image = global::Pinturas.Properties.Resources.Icojam_Blue_Bits_Warning;
+            this.faltanDetallesToolStripMenuItem.Name = "faltanDetallesToolStripMenuItem";
+            this.faltanDetallesToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
+            this.faltanDetallesToolStripMenuItem.Text = "Formulas con Falta de detalles";
+            this.faltanDetallesToolStripMenuItem.Click += new System.EventHandler(this.faltanDetallesToolStripMenuItem_Click);
+            // 
+            // sinDatosToolStripMenuItem
+            // 
+            this.sinDatosToolStripMenuItem.Image = global::Pinturas.Properties.Resources.Oxygen_Icons_org_Oxygen_Status_dialog_warning;
+            this.sinDatosToolStripMenuItem.Name = "sinDatosToolStripMenuItem";
+            this.sinDatosToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
+            this.sinDatosToolStripMenuItem.Text = "Formulas Sin datos";
+            // 
+            // registrarVehiculoToolStripMenuItem
+            // 
+            this.registrarVehiculoToolStripMenuItem.Name = "registrarVehiculoToolStripMenuItem";
+            this.registrarVehiculoToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.registrarVehiculoToolStripMenuItem.Text = "Registrar Vehiculo";
+            this.registrarVehiculoToolStripMenuItem.Click += new System.EventHandler(this.registrarVehiculoToolStripMenuItem_Click);
+            // 
+            // buscarVehiculoToolStripMenuItem
+            // 
+            this.buscarVehiculoToolStripMenuItem.Name = "buscarVehiculoToolStripMenuItem";
+            this.buscarVehiculoToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.buscarVehiculoToolStripMenuItem.Text = "Buscar Vehiculo";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -369,6 +397,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtBusqueda2;
         private System.Windows.Forms.ComboBox TxtTipoBusqueda;
+        private System.Windows.Forms.ToolStripMenuItem vehiculosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarVehiculoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarVehiculoToolStripMenuItem;
     }
 }
 

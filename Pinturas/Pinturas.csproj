@@ -86,6 +86,7 @@
     <Compile Include="Tintes.Designer.cs">
       <DependentUpon>Tintes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vehiculos.cs" />
     <EmbeddedResource Include="CrearFormula.resx">
       <DependentUpon>CrearFormula.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="imagenes\select_by_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vehiculo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

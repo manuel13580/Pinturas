@@ -39,12 +39,10 @@
             this.txtmarca = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtbusqueda = new System.Windows.Forms.TextBox();
-            this.combotinte = new System.Windows.Forms.ComboBox();
+            this.dgvVehiculos = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -58,11 +56,11 @@
             this.groupBox1.Controls.Add(this.txtmodelo);
             this.groupBox1.Controls.Add(this.txtmarca);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(23, 33);
+            this.groupBox1.Location = new System.Drawing.Point(39, 73);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(438, 239);
+            this.groupBox1.Size = new System.Drawing.Size(417, 198);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Vehiculo";
@@ -91,19 +89,20 @@
             // 
             this.button3.Image = global::Pinturas.Properties.Resources.delete;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(265, 131);
+            this.button3.Location = new System.Drawing.Point(266, 146);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 52);
             this.button3.TabIndex = 6;
             this.button3.Text = "      Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.Image = global::Pinturas.Properties.Resources.Hopstarter_Soft_Scraps_Gear;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(265, 83);
+            this.button2.Location = new System.Drawing.Point(266, 90);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 47);
@@ -115,7 +114,7 @@
             // 
             this.button1.Image = global::Pinturas.Properties.Resources.add1;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(265, 23);
+            this.button1.Location = new System.Drawing.Point(266, 24);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 52);
@@ -164,61 +163,39 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.txtbusqueda);
-            this.groupBox2.Controls.Add(this.combotinte);
-            this.groupBox2.Location = new System.Drawing.Point(491, 33);
+            this.groupBox2.Controls.Add(this.dgvVehiculos);
+            this.groupBox2.Location = new System.Drawing.Point(31, 279);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(416, 239);
+            this.groupBox2.Size = new System.Drawing.Size(652, 298);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Vehiculos";
+            this.groupBox2.Text = "Vehiculos Registrados";
             // 
-            // dataGridView1
+            // dgvVehiculos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 71);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(353, 160);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // txtbusqueda
-            // 
-            this.txtbusqueda.Location = new System.Drawing.Point(139, 38);
-            this.txtbusqueda.Margin = new System.Windows.Forms.Padding(4);
-            this.txtbusqueda.Name = "txtbusqueda";
-            this.txtbusqueda.Size = new System.Drawing.Size(141, 22);
-            this.txtbusqueda.TabIndex = 1;
-            // 
-            // combotinte
-            // 
-            this.combotinte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combotinte.FormattingEnabled = true;
-            this.combotinte.Items.AddRange(new object[] {
-            "Por Codigo",
-            "Por Nombre"});
-            this.combotinte.Location = new System.Drawing.Point(9, 38);
-            this.combotinte.Margin = new System.Windows.Forms.Padding(4);
-            this.combotinte.Name = "combotinte";
-            this.combotinte.Size = new System.Drawing.Size(120, 24);
-            this.combotinte.TabIndex = 0;
+            this.dgvVehiculos.AllowUserToAddRows = false;
+            this.dgvVehiculos.AllowUserToDeleteRows = false;
+            this.dgvVehiculos.AllowUserToOrderColumns = true;
+            this.dgvVehiculos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVehiculos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvVehiculos.Location = new System.Drawing.Point(8, 23);
+            this.dgvVehiculos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvVehiculos.MultiSelect = false;
+            this.dgvVehiculos.Name = "dgvVehiculos";
+            this.dgvVehiculos.ReadOnly = true;
+            this.dgvVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVehiculos.Size = new System.Drawing.Size(620, 257);
+            this.dgvVehiculos.TabIndex = 2;
+            this.dgvVehiculos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehiculos_CellContentClick);
             // 
             // RegistrarVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 329);
+            this.ClientSize = new System.Drawing.Size(964, 577);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "RegistrarVehiculo";
@@ -226,8 +203,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,8 +221,6 @@
         private System.Windows.Forms.TextBox txtmarca;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtbusqueda;
-        private System.Windows.Forms.ComboBox combotinte;
+        private System.Windows.Forms.DataGridView dgvVehiculos;
     }
 }

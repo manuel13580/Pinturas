@@ -164,5 +164,55 @@ namespace Pinturas
             }
 
         }
+
+
+        public bool llenarGridViewVehiculos(DataGridView grid) {
+
+            try
+            {
+                SqlConnection conex = new SqlConnection();
+                // conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
+                conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
+                conex.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter("Select * from Automovil", conex);
+                da.Fill(dt);
+                grid.DataSource = dt;
+                return true;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo llenar la informacion de vehiculos " + ex.Message);
+                return false;
+            }
+            
+        }
+
+        public bool llenarGridViewTintes(DataGridView grid)
+        {
+
+            try
+            {
+                SqlConnection conex = new SqlConnection();
+                // conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
+                conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
+                conex.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter("Select * from Tinte", conex);
+                da.Fill(dt);
+                grid.DataSource = dt;
+                return true;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo llenar la informacion de Tintes " + ex.Message);
+                return false;
+            }
+
+        }
+
+
     }
 }

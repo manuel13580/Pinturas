@@ -29,6 +29,32 @@ namespace Pinturas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool v = iniciar_vehiculo();
+            Conexion c = new Conexion();
+            c.llenarGridViewVehiculos(dgvVehiculos);
+        }
+
+        public bool iniciar_vehiculo()
+        {
+            Vehiculos v = new Vehiculos();
+            bool val = v.validar_campos(Convert.ToString(txtmarca.Text), Convert.ToString(txtmodelo.Text),
+                       Convert.ToString(txttipo.Text));
+            txtmarca.Text = "";
+            txtmodelo.Text = "";
+            txttipo.Text = "";
+           
+            return true;
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvVehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
