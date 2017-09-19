@@ -28,20 +28,21 @@ namespace Pinturas
 
         private void button1_Click(object sender, EventArgs e)
         {
-           bool ver = iniciar_verificacion();
-            Conexion c = new Conexion();
-            c.llenarGridViewTintes(dgvTintes);
+           bool v_verificacion = iniciar_verificacion();
+            Conexion c_conexion = new Conexion();
+            c_conexion.llenarGridViewTintes(dgvTintes);
         }
 
 
         public bool iniciar_verificacion() {
-            Tinte t = new Tinte();
-            bool val = t.validar_campos(Convert.ToString(txtcodigo.Text), Convert.ToString(txtnombre.Text),
+            Tinte c_tintes = new Tinte();
+            bool v_creacionTinte = c_tintes.m_validar_campos(Convert.ToString(txtcodigo.Text), Convert.ToString(txtnombre.Text),
                        Convert.ToString(txtmonocapa.Text), Convert.ToString(textrgb.Text), Convert.ToString(textPrecio.Text));
             txtcodigo.Text = "";
             txtnombre.Text = "";
             txtmonocapa.Text = "";
             textPrecio.Text = "";
+            textrgb.Text = "";
             txtcodigo.Select();
             return true;
 

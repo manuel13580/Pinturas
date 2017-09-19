@@ -56,11 +56,11 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(39, 73);
+            this.groupBox1.Location = new System.Drawing.Point(122, 23);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(417, 198);
+            this.groupBox1.Size = new System.Drawing.Size(441, 198);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Vehiculo";
@@ -80,7 +80,7 @@
             // 
             this.button3.Image = global::Pinturas.Properties.Resources.delete;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(266, 146);
+            this.button3.Location = new System.Drawing.Point(268, 136);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 52);
@@ -93,7 +93,7 @@
             // 
             this.button2.Image = global::Pinturas.Properties.Resources.Hopstarter_Soft_Scraps_Gear;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(266, 90);
+            this.button2.Location = new System.Drawing.Point(268, 80);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 47);
@@ -105,7 +105,7 @@
             // 
             this.button1.Image = global::Pinturas.Properties.Resources.add1;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(266, 24);
+            this.button1.Location = new System.Drawing.Point(268, 14);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 52);
@@ -138,7 +138,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvVehiculos);
-            this.groupBox2.Location = new System.Drawing.Point(31, 279);
+            this.groupBox2.Location = new System.Drawing.Point(13, 229);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -273,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 577);
+            this.ClientSize = new System.Drawing.Size(1042, 577);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "RegistrarVehiculo";
