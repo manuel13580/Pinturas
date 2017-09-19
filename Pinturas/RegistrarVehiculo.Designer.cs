@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txttipo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtmodelo = new System.Windows.Forms.TextBox();
-            this.txtmarca = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvVehiculos = new System.Windows.Forms.DataGridView();
+            this.comboTipo = new System.Windows.Forms.ComboBox();
+            this.comboMarca = new System.Windows.Forms.ComboBox();
+            this.comboModelo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
@@ -47,14 +47,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txttipo);
+            this.groupBox1.Controls.Add(this.comboModelo);
+            this.groupBox1.Controls.Add(this.comboMarca);
+            this.groupBox1.Controls.Add(this.comboTipo);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtmodelo);
-            this.groupBox1.Controls.Add(this.txtmarca);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(39, 73);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -65,15 +65,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Vehiculo";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // txttipo
-            // 
-            this.txttipo.Location = new System.Drawing.Point(111, 134);
-            this.txttipo.Margin = new System.Windows.Forms.Padding(4);
-            this.txttipo.MaxLength = 10;
-            this.txttipo.Name = "txttipo";
-            this.txttipo.Size = new System.Drawing.Size(132, 22);
-            this.txttipo.TabIndex = 8;
             // 
             // label4
             // 
@@ -134,23 +125,6 @@
             this.label1.Text = "Marca :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtmodelo
-            // 
-            this.txtmodelo.Location = new System.Drawing.Point(111, 90);
-            this.txtmodelo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtmodelo.MaxLength = 60;
-            this.txtmodelo.Name = "txtmodelo";
-            this.txtmodelo.Size = new System.Drawing.Size(132, 22);
-            this.txtmodelo.TabIndex = 3;
-            // 
-            // txtmarca
-            // 
-            this.txtmarca.Location = new System.Drawing.Point(111, 37);
-            this.txtmarca.Margin = new System.Windows.Forms.Padding(4);
-            this.txtmarca.Name = "txtmarca";
-            this.txtmarca.Size = new System.Drawing.Size(132, 22);
-            this.txtmarca.TabIndex = 2;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -191,6 +165,110 @@
             this.dgvVehiculos.TabIndex = 2;
             this.dgvVehiculos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehiculos_CellContentClick);
             // 
+            // comboTipo
+            // 
+            this.comboTipo.FormattingEnabled = true;
+            this.comboTipo.Items.AddRange(new object[] {
+            "Sedan",
+            "Deportivo",
+            "Vans",
+            "Mini Vans",
+            "Hybrids",
+            "Pick Up",
+            "Convertible",
+            "Familiar",
+            "Compacto",
+            "Rural",
+            "Utileria",
+            "Electrico",
+            ""});
+            this.comboTipo.Location = new System.Drawing.Point(111, 135);
+            this.comboTipo.Name = "comboTipo";
+            this.comboTipo.Size = new System.Drawing.Size(132, 24);
+            this.comboTipo.TabIndex = 9;
+            // 
+            // comboMarca
+            // 
+            this.comboMarca.FormattingEnabled = true;
+            this.comboMarca.Items.AddRange(new object[] {
+            "Acura",
+            "Audi",
+            "BMW",
+            "Buick",
+            "Chevrolet",
+            "Dodge",
+            "Honda",
+            "HYUNDAI",
+            "ISUZU",
+            "Jaguar",
+            "Jeep",
+            "KIA",
+            "Lexus",
+            "Porshe",
+            "Toyota",
+            "Volvo"});
+            this.comboMarca.Location = new System.Drawing.Point(111, 42);
+            this.comboMarca.Name = "comboMarca";
+            this.comboMarca.Size = new System.Drawing.Size(132, 24);
+            this.comboMarca.TabIndex = 10;
+            // 
+            // comboModelo
+            // 
+            this.comboModelo.FormattingEnabled = true;
+            this.comboModelo.Items.AddRange(new object[] {
+            "1970",
+            "1971",
+            "1972",
+            "1973",
+            "1974",
+            "1975",
+            "1976",
+            "1977",
+            "1978",
+            "1979",
+            "1980",
+            "1981",
+            "1982",
+            "1983",
+            "1984",
+            "1985",
+            "1986",
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017"});
+            this.comboModelo.Location = new System.Drawing.Point(111, 90);
+            this.comboModelo.Name = "comboModelo";
+            this.comboModelo.Size = new System.Drawing.Size(132, 24);
+            this.comboModelo.TabIndex = 11;
+            // 
             // RegistrarVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,16 +289,16 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txttipo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtmodelo;
-        private System.Windows.Forms.TextBox txtmarca;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvVehiculos;
+        private System.Windows.Forms.ComboBox comboTipo;
+        private System.Windows.Forms.ComboBox comboMarca;
+        private System.Windows.Forms.ComboBox comboModelo;
     }
 }

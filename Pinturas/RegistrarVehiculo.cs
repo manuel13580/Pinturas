@@ -29,19 +29,19 @@ namespace Pinturas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool v = iniciar_vehiculo();
-            Conexion c = new Conexion();
-            c.llenarGridViewVehiculos(dgvVehiculos);
+            bool v_crearVehiculo = m_iniciar_vehiculo();
+            Conexion c_conexion = new Conexion();
+            c_conexion.llenarGridViewVehiculos(dgvVehiculos);
         }
 
-        public bool iniciar_vehiculo()
+        public bool m_iniciar_vehiculo()
         {
-            Vehiculos v = new Vehiculos();
-            bool val = v.validar_campos(Convert.ToString(txtmarca.Text), Convert.ToString(txtmodelo.Text),
-                       Convert.ToString(txttipo.Text));
-            txtmarca.Text = "";
-            txtmodelo.Text = "";
-            txttipo.Text = "";
+            Vehiculos c_vehiculo = new Vehiculos();
+            bool v_iniciarVehiculo = c_vehiculo.m_validar_campos(Convert.ToString(comboMarca.Text), Convert.ToString(comboModelo.Text),
+                                     Convert.ToString(comboTipo.Text));
+            comboMarca.Text = "";
+            comboModelo.Text = "";
+            comboTipo.Text = "";
            
             return true;
 

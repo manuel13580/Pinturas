@@ -9,45 +9,47 @@ namespace Pinturas
 {
     public class Vehiculos
     {
-        public bool validar_campos(string marca, string modelo, string tipo)
+        public bool m_validar_campos(string v_marca, string v_modelo, string v_tipo)
         {
-            if (marca == "" || modelo == "" || tipo == "" )
+            bool r_respuesta = false;
+            if (v_marca == "" || v_modelo == "" || v_tipo == "" )
             {
                 MessageBox.Show("Faltan campos obligatorios");
-                return false;
+                r_respuesta =false;
             }
             else
             {
-                registrar_Vehiculo(marca,modelo,tipo);
+                m_registrar_Vehiculo(v_marca,v_modelo,v_tipo);
                 
-                return true;
+                r_respuesta = true;
             }
+            return r_respuesta;
 
         }
 
-        public bool registrar_Vehiculo(string marca, string modelo, string tipo)
+        public bool m_registrar_Vehiculo(string v_marca, string v_modelo, string v_tipo)
         {
-            bool respuesta = false;
+            bool r_respuesta = false;
             Conexion nueva = new Conexion();
             try
             {
-                if (marca.Trim() != "" && modelo.Trim() != "" && tipo.Trim() != "")
+                if (v_marca.Trim() != "" && v_modelo.Trim() != "" && v_tipo.Trim() != "")
                 {
                     nueva.EjecutarQuery("INSERT INTO Automovil(Marca,Modelo,Tipo)" +
-                                     " values('" + marca + "','" + modelo + "','" + tipo +  "')");
+                                     " values('" + v_marca + "','" + v_modelo + "','" + v_tipo +  "')");
 
                     MessageBox.Show("Vehiculo Registrado");
-                    respuesta = true;
+                    r_respuesta = true;
                 }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo realizar la insercion " + ex.ToString());
-                respuesta = false;
+                r_respuesta = false;
 
             }
-            return respuesta;
+            return r_respuesta;
         }
 
 
