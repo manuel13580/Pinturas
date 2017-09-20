@@ -69,5 +69,10 @@ namespace Pinturas
         {
 
         }
+
+        private void Tintes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

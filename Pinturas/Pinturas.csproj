@@ -76,6 +76,7 @@
     <Compile Include="Formulario_Color.Designer.cs">
       <DependentUpon>Formulario_Color.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Microsoft\VisualBasic\Interaction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

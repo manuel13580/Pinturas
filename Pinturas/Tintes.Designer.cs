@@ -248,6 +248,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tintes";
             this.Text = "Tintes";
+            this.Load += new System.EventHandler(this.Tintes_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTintes)).EndInit();
             this.groupBox1.ResumeLayout(false);
