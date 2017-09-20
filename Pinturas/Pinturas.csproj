@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Color.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Color.Designer.cs">
+      <DependentUpon>Color.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="CrearFormula.cs">
       <SubType>Form</SubType>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="FormulaPresentacion.Designer.cs">
       <DependentUpon>FormulaPresentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario_Color.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario_Color.Designer.cs">
+      <DependentUpon>Formulario_Color.cs</DependentUpon>
     </Compile>
     <Compile Include="Microsoft\VisualBasic\Interaction.cs" />
     <Compile Include="Program.cs" />
@@ -87,6 +99,9 @@
       <DependentUpon>Tintes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vehiculos.cs" />
+    <EmbeddedResource Include="Color.resx">
+      <DependentUpon>Color.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearFormula.resx">
       <DependentUpon>CrearFormula.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormulaPresentacion.resx">
       <DependentUpon>FormulaPresentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario_Color.resx">
+      <DependentUpon>Formulario_Color.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

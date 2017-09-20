@@ -155,5 +155,11 @@ namespace Pinturas
             RegistrarVehiculo form = new RegistrarVehiculo();
             form.Show();
         }
+
+        private void coloresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Color nuevo = new Color();
+            nuevo.Show();
+        }
     }
 }
