@@ -14,6 +14,8 @@ namespace Pinturas
     public class Tinte
     {
 
+
+        //Validaciones
         public bool m_validar_campos(string v_codigo, string v_nombre, string v_mono_capa, string v_rgb, string v_precio)
         {
             if (v_codigo == "" || v_nombre == "" || v_mono_capa == "" || v_rgb == "" || v_precio == "")
