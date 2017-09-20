@@ -38,12 +38,12 @@ namespace Pinturas
             button3.Visible = true;
             button4.Visible = true;
             button5.Visible = true;
-            Conexion nueva = new Conexion();
-            SqlDataReader autos = nueva.Consulta("select * from Automovil;");
-            while (autos.Read())
+            Conexion c_nueva = new Conexion();
+            SqlDataReader c_autos = c_nueva.Consulta("select * from Automovil;");
+            while (c_autos.Read())
             {
-                comboTipoAuto.Items.Add(autos[1].ToString());
-                ListaCodigosAuto.Add(Int32.Parse(autos[0].ToString()));
+                comboTipoAuto.Items.Add(c_autos[1].ToString());
+                ListaCodigosAuto.Add(Int32.Parse(c_autos[0].ToString()));
             }
             comboTipoAuto.Text = this.auto;
             lblcodigo.Text = this.cod_color;
@@ -56,24 +56,24 @@ namespace Pinturas
             txtcodigo.Visible = false;
             txtdescripcion.Visible = false;
 
-            Actualizar();
+            m_Actualizar();
         }
-        public bool Actualizar()
+        public bool m_Actualizar()
         {
             combomedidas.Items.Clear();
             combo_formula.Items.Clear();
             Listamedidas.Clear();
-            Conexion nueva = new Conexion();
-            SqlDataReader medidas = nueva.Consulta("select * from Medida;");
-            while (medidas.Read())
+            Conexion c_nueva = new Conexion();
+            SqlDataReader c_medidas = c_nueva.Consulta("select * from Medida;");
+            while (c_medidas.Read())
             {
-                combomedidas.Items.Add(medidas[0].ToString());
-                Listamedidas.Add(Convert.ToDouble(medidas[1].ToString()));
-                combo_formula.Items.Add(medidas[0].ToString());
+                combomedidas.Items.Add(c_medidas[0].ToString());
+                Listamedidas.Add(Convert.ToDouble(c_medidas[1].ToString()));
+                combo_formula.Items.Add(c_medidas[0].ToString());
             }
             combo_formula.Text = this.Tamaño;
             combomedidas.Text = this.Tamaño;
-            nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", 1);
+            c_nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", 1);
             actualizarTotal();
             return true;
         }
@@ -83,18 +83,18 @@ namespace Pinturas
 
         public bool actualizarTotal()
         {
-            double total = 0;
+            double v_total = 0;
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                total = total + Convert.ToDouble(dataGridView1.Rows[i].Cells[2].Value.ToString());
-            lbltotal.Text = "Total de la Formula: " + total + " (g).";
+                v_total = v_total + Convert.ToDouble(dataGridView1.Rows[i].Cells[2].Value.ToString());
+            lbltotal.Text = "Total de la Formula: " + v_total + " (g).";
             return true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            NuevoRegistro();
+            m_NuevoRegistro();
         }
-        void NuevoRegistro()
+        void m_NuevoRegistro()
         {
             Registro nuevo = new Registro();
             nuevo.codigoP = valor;
@@ -105,34 +105,34 @@ namespace Pinturas
         {
             try
             {
-                int pos = dataGridView1.CurrentRow.Index;
-                Actualizar();
-                dataGridView1.Rows[pos].Selected = true;
-                ModificarRegistro(pos);
+                int v_pos = dataGridView1.CurrentRow.Index;
+                m_Actualizar();
+                dataGridView1.Rows[v_pos].Selected = true;
+                m_ModificarRegistro(v_pos);
             }
             catch (Exception ex)
             { }
         }
 
 
-        public bool ModificarRegistro(int pos)
+        public bool m_ModificarRegistro(int pos)
         {
             try
             {
-                string Nuevo = "";
-                Nuevo = Microsoft.VisualBasic.Interaction.InputBox("La cantidad actual es de " + dataGridView1.Rows[pos].Cells[2].Value.ToString() + " (g) para una formula de " + combo_formula.Text + ", Ingrese la nueva cantidad (g)", "Nueva Cantidad", dataGridView1.Rows[pos].Cells[2].Value.ToString());
-                double NuevaCant = 0;
-                if (!Nuevo.Trim().Equals(""))
+                string v_Nuevo = "";
+                v_Nuevo = Microsoft.VisualBasic.Interaction.InputBox("La cantidad actual es de " + dataGridView1.Rows[pos].Cells[2].Value.ToString() + " (g) para una formula de " + combo_formula.Text + ", Ingrese la nueva cantidad (g)", "Nueva Cantidad", dataGridView1.Rows[pos].Cells[2].Value.ToString());
+                double v_NuevaCant = 0;
+                if (!v_Nuevo.Trim().Equals(""))
                 {
                     try
                     {
-                        NuevaCant = Convert.ToDouble(Nuevo);
+                        v_NuevaCant = Convert.ToDouble(v_Nuevo);
                         try
                         {
-                            Conexion nueva = new Conexion();
-                            if (Nuevo.Trim() != "")
-                                nueva.EjecutarQuery("update Asignacion set Cantidad=" + NuevaCant + " where Id_presentacion=" + valor + " and Codigo_tinte='" + dataGridView1.Rows[pos].Cells[0].Value.ToString() + "' and Cantidad=" + dataGridView1.Rows[pos].Cells[2].Value.ToString() + ";");
-                            Actualizar();
+                            Conexion c_nueva = new Conexion();
+                            if (v_Nuevo.Trim() != "")
+                                c_nueva.EjecutarQuery("update Asignacion set Cantidad=" + v_NuevaCant + " where Id_presentacion=" + valor + " and Codigo_tinte='" + dataGridView1.Rows[pos].Cells[0].Value.ToString() + "' and Cantidad=" + dataGridView1.Rows[pos].Cells[2].Value.ToString() + ";");
+                            m_Actualizar();
                             return true;
                         }
                         catch (Exception ex)
@@ -170,7 +170,7 @@ namespace Pinturas
             else if (e.KeyCode == Keys.F1)
             {
                 if (Form1.EsAdmin)
-                    NuevoRegistro();
+                    m_NuevoRegistro();
             }
             else if (e.KeyCode == Keys.F2)
             {
@@ -179,9 +179,9 @@ namespace Pinturas
                     try
                     {
                         int pos = dataGridView1.CurrentRow.Index;
-                        Actualizar();
+                        m_Actualizar();
                         dataGridView1.Rows[pos].Selected = true;
-                        ModificarRegistro(pos);
+                        m_ModificarRegistro(pos);
                     }
                     catch (Exception ex)
                     { }
@@ -196,7 +196,7 @@ namespace Pinturas
                     try
                     {
                         int pos = dataGridView1.CurrentRow.Index;
-                        Actualizar();
+                        m_Actualizar();
                         dataGridView1.Rows[pos].Selected = true;
                         EliminarRegistro(pos);
                     }
@@ -211,10 +211,10 @@ namespace Pinturas
         {
             try
             {
-                int pos = dataGridView1.CurrentRow.Index;
-                Actualizar();
-                dataGridView1.Rows[pos].Selected = true;
-                EliminarRegistro(pos);
+                int v_pos = dataGridView1.CurrentRow.Index;
+                m_Actualizar();
+                dataGridView1.Rows[v_pos].Selected = true;
+                EliminarRegistro(v_pos);
             }
             catch (Exception ex)
             { }
@@ -223,14 +223,14 @@ namespace Pinturas
         {
             try
             {
-                DialogResult dialogResult = MessageBox.Show("¿Desea eliminar el Tinte (codigo " + dataGridView1.Rows[pos].Cells[0].Value.ToString() + ") seleccionado?", "Aviso", MessageBoxButtons.YesNo);
+                DialogResult c_dialogResult = MessageBox.Show("¿Desea eliminar el Tinte (codigo " + dataGridView1.Rows[pos].Cells[0].Value.ToString() + ") seleccionado?", "Aviso", MessageBoxButtons.YesNo);
                 try
                 {
-                    if (dialogResult == DialogResult.Yes)
+                    if (c_dialogResult == DialogResult.Yes)
                     {
                         Conexion nueva = new Conexion();
                         nueva.EjecutarQuery("delete from Asignacion where Id_presentacion=" + valor + " and Codigo_tinte='" + dataGridView1.Rows[pos].Cells[0].Value.ToString() + "' and Cantidad=" + dataGridView1.Rows[pos].Cells[2].Value.ToString());
-                        Actualizar();
+                        m_Actualizar();
                     }
 
 
@@ -256,14 +256,14 @@ namespace Pinturas
         public bool calc()
         {
             Conexion nueva = new Conexion();
-            double factor = 1;
-            double val = 1;
+            double v_factor = 1;
+            double v_val = 1;
             SqlDataReader valorN = nueva.Consulta("select Cantidad from Medida where Nombre='" + combo_formula.Text + "';");
             if (valorN.Read())
-                val = Convert.ToDouble(valorN[0]);
-            double volumen = Convert.ToDouble(txtvolumen.Text);
-            factor = volumen / val;
-            nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", factor);
+                v_val = Convert.ToDouble(valorN[0]);
+            double v_volumen = Convert.ToDouble(txtvolumen.Text);
+            v_factor = v_volumen / v_val;
+            nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", v_factor);
 
             actualizarTotal();
             return true;
@@ -271,7 +271,7 @@ namespace Pinturas
 
         private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Actualizar();
+            m_Actualizar();
             actualizarTotal();
         }
     }

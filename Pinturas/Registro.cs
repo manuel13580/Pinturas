@@ -56,14 +56,14 @@ namespace Pinturas
         }
         private void txtbusqueda_TextChanged(object sender, EventArgs e)
         {
-            Conexion nueva = new Conexion();
+            Conexion c_nueva = new Conexion();
             if (combotinte.Text.Equals("Por Nombre"))
             {
-                nueva.LlenarGrid("select Codigo_tinte as \"Codigo\", Nombre as \"Nombre\"  from Tinte where Nombre like '%" + txtbusqueda.Text + "%';", dataGridView1, "Tinte");
+                c_nueva.LlenarGrid("select Codigo_tinte as \"Codigo\", Nombre as \"Nombre\"  from Tinte where Nombre like '%" + txtbusqueda.Text + "%';", dataGridView1, "Tinte");
             }
             else if (combotinte.Text.Equals("Por Codigo"))
             {
-                nueva.LlenarGrid("select Codigo_tinte as \"Codigo\", Nombre as \"Nombre\"  from Tinte where Codigo_tinte like '%" + txtbusqueda.Text + "%';", dataGridView1, "Tinte");
+                c_nueva.LlenarGrid("select Codigo_tinte as \"Codigo\", Nombre as \"Nombre\"  from Tinte where Codigo_tinte like '%" + txtbusqueda.Text + "%';", dataGridView1, "Tinte");
             }
 
         }
