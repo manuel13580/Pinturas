@@ -1,0 +1,219 @@
+[33mcommit 0977d853447d320b12e975c4ca2293d500281b22[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Estandares[m[33m, [m[1;32mEstandares[m[33m)[m
+Author: angelgbriel <angelgbriel@gmail.com>
+Date:   Wed Sep 20 00:06:36 2017 -0600
+
+    ---
+
+[33mcommit 9918c359fe808bc84b1fc74fa2e562620687a2b6[m
+Author: angelgbriel <fabiolasandoval04@gmail.com>
+Date:   Tue Sep 19 23:54:51 2017 -0600
+
+    Cargando...
+
+[33mcommit faed02c1eace86c3b2eaf886115ffc62845dc0db[m
+Author: angelgbriel <fabiolasandoval04@gmail.com>
+Date:   Tue Sep 19 23:40:35 2017 -0600
+
+    Commit
+
+[33mcommit ac14d90520bb6a376b2c12541c880efaa5f82d9f[m
+Author: angelgbriel <fabiolasandoval04@gmail.com>
+Date:   Tue Sep 19 23:24:58 2017 -0600
+
+    Se crean pruebas unitarias para precio de formula
+
+[33mcommit 1aa3e7cf73b5f05863fc5b61a0dbe777c325141e[m
+Author: fabisandoval <fabiolasandoval04@gmail.com>
+Date:   Tue Sep 19 01:00:27 2017 -0600
+
+    Se realizan estandares de codificacion  a Crear Tinte
+
+[33mcommit 63d3bf5c19c6fd44173e589d40cfd7822294d5b7[m[33m ([m[1;33mtag: v2.6.0[m[33m)[m
+Author: fabisandoval <fabiolasandoval04@gmail.com>
+Date:   Tue Sep 19 00:42:12 2017 -0600
+
+    Se realizan estandares de codificacion  a Registrar Vehiculo
+
+[33mcommit 0fd823cdc7789fd1df5221e0efeb84135e612799[m[33m ([m[1;33mtag: v2.5.5[m[33m, [m[1;31morigin/Vehiculos[m[33m)[m
+Author: fabisandoval <fabiolasandoval04@gmail.com>
+Date:   Mon Sep 18 01:01:37 2017 -0600
+
+    Se completa implementacion de crear vehiculo
+
+[33mcommit a01e6428c076320b193b58be1d9068d80aa69534[m
+Author: fabisandoval <fabiolasandoval04@gmail.com>
+Date:   Sat Sep 16 23:09:17 2017 -0600
+
+    Se crean pruebas unitarias para vehiculos
+
+[33mcommit ab3fff803029e47d97bef3265f9cd1f0d01142e3[m[33m ([m[1;33mtag: v2.5.4[m[33m)[m
+Author: fabisandoval <fabiolasandoval04@gmail.com>
+Date:   Sat Sep 16 21:25:20 2017 -0600
+
+    Se crea interfaz para vehiculos
+
+[33mcommit e28f17dabe6236196e58822cd6af24e21bad9aff[m[33m ([m[1;33mtag: v2.5.3[m[33m, [m[1;31morigin/C_tinte[m[33m)[m
+Author: fabisandoval <fabiolasandoval04@gmail.com>
+Date:   Sat Sep 16 20:17:31 2017 -0600
+
+    Se termina el codigo de agregar Precio
+
+[33mcommit 6481c3831398f02f650798b1ca9c968d18d3b113[m[33m ([m[1;33mtag: v2.5.2[m[33m)[m
+Author: fabisandoval <fabiolasandoval04@gmail.com>
+Date:   Sat Sep 16 18:29:02 2017 -0600
+
+    Se creo prueba unitaria Para Precio
+
+[33mcommit 4739381f521a6f5a50fc8db995f671754ae13685[m[33m ([m[1;33mtag: v2.5.1[m[33m)[m
+Author: fabisandoval <fabiolasandoval04@gmail.com>
+Date:   Sat Sep 16 15:42:37 2017 -0600
+
+    Se modifico la interfaz de tintes para agregar el precio
+
+[33mcommit 88c67453c22c5fb66dd8beae58724e82dd1f64d4[m[33m ([m[1;33mtag: v2.5.0[m[33m)[m
+Merge: 80c5a2c bfae78a
+Author: Paublo <manuel13580@gmail.com>
+Date:   Thu Aug 24 20:47:57 2017 -0600
+
+    Se unio tinte
+
+[33mcommit bfae78a88f5aed3bb3704ed401bd53188fd2fa70[m[33m ([m[1;33mtag: v2.4.0[m[33m)[m
+Author: Paublo <manuel13580@gmail.com>
+Date:   Thu Aug 24 20:43:52 2017 -0600
+
+    Tintes Terminado
+
+[33mcommit 80c5a2c1dfd3221c43fb80780b58c35d10f03420[m[33m ([m[1;33mtag: v2.3.0[m[33m)[m
+Merge: b473454 9d85c56
+Author: Paublo <manuel13580@gmail.com>
+Date:   Thu Aug 24 20:18:25 2017 -0600
+
+    Se agrego tintes al principal
+
+[33mcommit 9d85c5690ae888ec6415c23643811beb9cc98802[m
+Author: Paublo <manuel13580@gmail.com>
+Date:   Thu Aug 24 20:15:16 2017 -0600
+
+    Guardando cambios de tintes
+
+[33mcommit b4734545167743ed13cdd1ed4df7da8c44fa4e9f[m
+Author: Paublo <manuel13580@gmail.com>
+Date:   Thu Aug 24 20:12:51 2017 -0600
+
+    Guardando cambios de pruebas
+
+[33mcommit 149e04695a843e0547a8ddc46a30e68b21a8f272[m
+Merge: 9d6f5ea c768b2b
+Author: Paublo <pamg26894@gmail.com>
+Date:   Tue Aug 22 23:41:02 2017 -0600
+
+    final
+
+[33mcommit c768b2bd9192279dbb1d9833ca748aa1ca22c551[m[33m ([m[1;33mtag: v2.1.0[m[33m, [m[1;31morigin/Pruebas_Unitarias[m[33m)[m
+Author: Paublo <pamg26894@gmail.com>
+Date:   Tue Aug 22 23:37:19 2017 -0600
+
+    Pruebas Unitarias Finales
+
+[33mcommit 9d6f5ea2dbb3b0eee85764c6be930d28a81b6c72[m
+Author: Paublo <pamg26894@gmail.com>
+Date:   Tue Aug 22 23:28:10 2017 -0600
+
+    Pruebas Unitarias ...
+
+[33mcommit 9e233e7718f93c21708aa939cc2fb7743f56383a[m[33m ([m[1;33mtag: v1.8.0[m[33m)[m
+Author: Angel <angelgbriel@gmail.com>
+Date:   Tue Aug 22 23:20:03 2017 -0600
+
+    Se completo la creacion de  tintes
+
+[33mcommit 3e0667108704e929d098d8b774e02b5fb051054e[m
+Merge: 3245281 430229e
+Author: Fabiola <fabiolasandoval04@gmail.com>
+Date:   Tue Aug 22 22:55:19 2017 -0600
+
+    Merge branch 'tintes'
+
+[33mcommit 32452818519638563579eece67ad585c947ff6b4[m[33m ([m[1;33mtag: v1.7.1[m[33m)[m
+Author: Fabiola <fabiolasandoval04@gmail.com>
+Date:   Tue Aug 22 22:51:55 2017 -0600
+
+    Se completo la interfaz grafica del area de tintes
+
+[33mcommit 430229ef94efd627264ce807b3b7df20ba0f8465[m[33m ([m[1;33mtag: v1.7.0[m[33m, [m[1;31morigin/tintes[m[33m)[m
+Author: Fabiola <fabiolasandoval04@gmail.com>
+Date:   Tue Aug 22 22:26:01 2017 -0600
+
+    Se completo la interfaz grafica del area de tintes
+
+[33mcommit 78d3b59403bf6084c3b12700974236c79eb4485a[m[33m ([m[1;33mtag: v2.0.0[m[33m)[m
+Author: Paublo <pamg26894@gmail.com>
+Date:   Tue Aug 22 22:23:52 2017 -0600
+
+    Pruebas Unitarias
+
+[33mcommit d534fadfdce1fffb433a9a024bbbaca7bad788d1[m[33m ([m[1;33mtag: v1.6.0[m[33m, [m[1;31morigin/Crear_Consulta_Formula[m[33m)[m
+Author: Paublo <manuel13580@gmail.com>
+Date:   Tue Aug 22 18:25:44 2017 -0600
+
+    Se finalizo la Consulta de Formula
+
+[33mcommit fa5026b977d72b29fdb9787341773a2c27faf070[m
+Author: Paublo <manuel13580@gmail.com>
+Date:   Tue Aug 22 17:57:42 2017 -0600
+
+    Se agrego la interfaz de consultar formula
+
+[33mcommit ed3266efc52b3e691cf23056f66df947aa8ae4a6[m[33m ([m[1;33mtag: v1.5.0[m[33m, [m[1;31morigin/Listado_Formulas[m[33m)[m
+Author: Paublo <manuel13580@gmail.com>
+Date:   Tue Aug 22 14:06:07 2017 -0600
+
+    Se completo la creacion de la formula con listados
+
+[33mcommit a66521879c58c44540e97f8f7558ebc41f2e2d64[m
+Author: Paublo <manuel13580@gmail.com>
+Date:   Tue Aug 22 13:28:09 2017 -0600
+
+    Se agrego el listado de formulas al form principal y se enlazaron las ventanas
+
+[33mcommit c80c1595bacebcf16cc803d0522a95e56150de98[m[33m ([m[1;33mtag: v1.4.0[m[33m, [m[1;31morigin/Crear_Formula[m[33m)[m
+Author: Paublo <manuel13580@gmail.com>
+Date:   Tue Aug 22 11:04:19 2017 -0600
+
+    Se creo la seccion para agregar tintes
+
+[33mcommit 5cc746fa5a5b889a5454c82f91d3a5b2136e11f3[m[33m ([m[1;33mtag: v1.3.0[m[33m)[m
+Author: Manuel <manuel13580@gmail.com>
+Date:   Tue Aug 22 10:44:38 2017 -0600
+
+    Se creo el formulario que relaciona la informacion de la formula con los tintes
+
+[33mcommit 07c244fdeb5bd8f23d8ffb8f7787620b6f2ad07d[m
+Author: Manuel <manuel13580@gmail.com>
+Date:   Tue Aug 22 10:16:17 2017 -0600
+
+    Se creo el formulario para la creacion de la formula
+
+[33mcommit d29f47c0d7d207eb6f9a2fd370a2162d1043e268[m[33m ([m[1;33mtag: v1.2.0[m[33m, [m[1;31morigin/Conexion[m[33m)[m
+Author: Manuel <manuel13580@gmail.com>
+Date:   Tue Aug 22 09:35:29 2017 -0600
+
+    Clase Conexion Finalizada
+
+[33mcommit 1de3fb0d50f288e4d9b02231e73cfcc76117fec7[m
+Author: Manuel <manuel13580@gmail.com>
+Date:   Tue Aug 22 07:57:59 2017 -0600
+
+    Se crearon los querys de la clase conexion
+
+[33mcommit 1d41f9d45bf3bb7544c9a07d94a7bab1f68a0b36[m[33m ([m[1;33mtag: v1.0.1[m[33m)[m
+Author: Manuel <manuel13580@gmail.com>
+Date:   Mon Aug 21 21:45:36 2017 -0600
+
+    Se creo la clase conexion
+
+[33mcommit bfa5dbedde1e80cb5d30e9036e755d1126156f4a[m[33m ([m[1;33mtag: v1.0.0[m[33m)[m
+Author: Manuel <manuel13580@gmail.com>
+Date:   Mon Aug 21 21:33:41 2017 -0600
+
+    subir proyecto vacio
