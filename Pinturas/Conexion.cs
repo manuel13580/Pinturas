@@ -18,9 +18,9 @@ namespace Pinturas
             SqlDataReader rs;
             conex = new SqlConnection();
             comm = new SqlCommand();
-            // conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
-            
-             conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
+            conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
+
+            //conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
             comm.Connection = conex;
             string sql = "select Id_auto as Codigo, Marca as Marca from Automovil;";
             comm.CommandText = sql;
@@ -53,8 +53,8 @@ namespace Pinturas
             SqlConnection conex = new SqlConnection();
             SqlCommand comm = new SqlCommand();
             SqlDataReader rs;
-           // conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
-            conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
+            conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
+            //conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
             comm.Connection = conex;
             comm.CommandText = consulta;
             conex.Open();
@@ -69,8 +69,8 @@ namespace Pinturas
         {
             SqlConnection conex = new SqlConnection();
             SqlCommand comm = new SqlCommand();
-           // conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
-            conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
+            conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
+            //conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
             comm.Connection = conex;
             comm.CommandText = consulta;
             conex.Open();
@@ -86,8 +86,8 @@ namespace Pinturas
             try
             {
                 SqlConnection conex = new SqlConnection();
-                // conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
-                conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
+                conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
+                //conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
                 conex.Open();
                 SqlDataAdapter data = new SqlDataAdapter(consulta, conex);
                 DataSet ds = new DataSet();
@@ -114,8 +114,8 @@ namespace Pinturas
             try
             {
                 SqlConnection conex = new SqlConnection();
-                //conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
-                conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
+                conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
+                //conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
                 conex.Open();
                 SqlDataAdapter data = new SqlDataAdapter(consulta, conex);
                 DataSet ds = new DataSet();
@@ -171,8 +171,8 @@ namespace Pinturas
             try
             {
                 SqlConnection conex = new SqlConnection();
-                // conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
-                conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
+                conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
+                //conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
                 conex.Open();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter("Select * from Automovil", conex);
@@ -195,11 +195,34 @@ namespace Pinturas
             try
             {
                 SqlConnection conex = new SqlConnection();
-                // conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
-                conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
+                conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
+                //conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
                 conex.Open();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter("Select * from Tinte", conex);
+                da.Fill(dt);
+                grid.DataSource = dt;
+                return true;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo llenar la informacion de Tintes " + ex.Message);
+                return false;
+            }
+
+        }
+        public bool llenarGridViewColores(DataGridView grid)
+        {
+
+            try
+            {
+                SqlConnection conex = new SqlConnection();
+                conex.ConnectionString = "Data Source=.;Initial Catalog=BDLineaPinturas;Integrated Security=True;MultipleActiveResultSets=true;";
+                //conex.ConnectionString = "Data Source=FABIOLA-PC" + "\\" + "SQLEXPRESS;Initial Catalog=BDLineaPinturas;Integrated Security=True";
+                conex.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter("Select Id_presentacion as Formula, Nombre_Color as Nombre_Color, RGB as Tono from Color", conex);
                 da.Fill(dt);
                 grid.DataSource = dt;
                 return true;

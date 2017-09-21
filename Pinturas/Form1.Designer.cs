@@ -33,7 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tinteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.presentacionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.presentacionesTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.presentacionesNoTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faltanDetallesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sinDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,16 +57,7 @@
             this.TxtTipoBusqueda = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tinteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.presentacionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.vehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.presentacionesTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.presentacionesNoTerminadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.faltanDetallesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sinDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coloresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -80,10 +81,59 @@
             this.nuevoToolStripMenuItem,
             this.tinteToolStripMenuItem1,
             this.presentacionToolStripMenuItem1,
-            this.vehiculosToolStripMenuItem});
+            this.vehiculosToolStripMenuItem,
+            this.coloresToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.opcionesToolStripMenuItem.Text = "Datos";
+            // 
+            // nuevoToolStripMenuItem
+            // 
+            this.nuevoToolStripMenuItem.Image = global::Pinturas.Properties.Resources.tick;
+            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.nuevoToolStripMenuItem.Text = "Actualizar";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
+            // 
+            // tinteToolStripMenuItem1
+            // 
+            this.tinteToolStripMenuItem1.Image = global::Pinturas.Properties.Resources.select_by_color;
+            this.tinteToolStripMenuItem1.Name = "tinteToolStripMenuItem1";
+            this.tinteToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.tinteToolStripMenuItem1.Text = "Tinte";
+            this.tinteToolStripMenuItem1.Click += new System.EventHandler(this.tinteToolStripMenuItem1_Click);
+            // 
+            // presentacionToolStripMenuItem1
+            // 
+            this.presentacionToolStripMenuItem1.Image = global::Pinturas.Properties.Resources.Graphicloads_Medical_Health_Equation;
+            this.presentacionToolStripMenuItem1.Name = "presentacionToolStripMenuItem1";
+            this.presentacionToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.presentacionToolStripMenuItem1.Text = "Formula";
+            this.presentacionToolStripMenuItem1.Click += new System.EventHandler(this.presentacionToolStripMenuItem1_Click);
+            // 
+            // vehiculosToolStripMenuItem
+            // 
+            this.vehiculosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarVehiculoToolStripMenuItem,
+            this.buscarVehiculoToolStripMenuItem});
+            this.vehiculosToolStripMenuItem.Image = global::Pinturas.Properties.Resources.vehiculo1;
+            this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
+            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.vehiculosToolStripMenuItem.Text = "Vehiculos ";
+            this.vehiculosToolStripMenuItem.Click += new System.EventHandler(this.vehiculosToolStripMenuItem_Click);
+            // 
+            // registrarVehiculoToolStripMenuItem
+            // 
+            this.registrarVehiculoToolStripMenuItem.Name = "registrarVehiculoToolStripMenuItem";
+            this.registrarVehiculoToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.registrarVehiculoToolStripMenuItem.Text = "Registrar Vehiculo";
+            this.registrarVehiculoToolStripMenuItem.Click += new System.EventHandler(this.registrarVehiculoToolStripMenuItem_Click);
+            // 
+            // buscarVehiculoToolStripMenuItem
+            // 
+            this.buscarVehiculoToolStripMenuItem.Name = "buscarVehiculoToolStripMenuItem";
+            this.buscarVehiculoToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.buscarVehiculoToolStripMenuItem.Text = "Buscar Vehiculo";
             // 
             // mostrarToolStripMenuItem
             // 
@@ -95,6 +145,37 @@
             this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
             this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.mostrarToolStripMenuItem.Text = "Mostrar";
+            // 
+            // presentacionesTerminadasToolStripMenuItem
+            // 
+            this.presentacionesTerminadasToolStripMenuItem.Image = global::Pinturas.Properties.Resources.tick;
+            this.presentacionesTerminadasToolStripMenuItem.Name = "presentacionesTerminadasToolStripMenuItem";
+            this.presentacionesTerminadasToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
+            this.presentacionesTerminadasToolStripMenuItem.Text = "Formulas Completas";
+            this.presentacionesTerminadasToolStripMenuItem.Click += new System.EventHandler(this.presentacionesTerminadasToolStripMenuItem_Click);
+            // 
+            // presentacionesNoTerminadasToolStripMenuItem
+            // 
+            this.presentacionesNoTerminadasToolStripMenuItem.Image = global::Pinturas.Properties.Resources.delete2;
+            this.presentacionesNoTerminadasToolStripMenuItem.Name = "presentacionesNoTerminadasToolStripMenuItem";
+            this.presentacionesNoTerminadasToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
+            this.presentacionesNoTerminadasToolStripMenuItem.Text = "Formulas Incompletas";
+            this.presentacionesNoTerminadasToolStripMenuItem.Click += new System.EventHandler(this.presentacionesNoTerminadasToolStripMenuItem_Click);
+            // 
+            // faltanDetallesToolStripMenuItem
+            // 
+            this.faltanDetallesToolStripMenuItem.Image = global::Pinturas.Properties.Resources.Icojam_Blue_Bits_Warning;
+            this.faltanDetallesToolStripMenuItem.Name = "faltanDetallesToolStripMenuItem";
+            this.faltanDetallesToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
+            this.faltanDetallesToolStripMenuItem.Text = "Formulas con Falta de detalles";
+            this.faltanDetallesToolStripMenuItem.Click += new System.EventHandler(this.faltanDetallesToolStripMenuItem_Click);
+            // 
+            // sinDatosToolStripMenuItem
+            // 
+            this.sinDatosToolStripMenuItem.Image = global::Pinturas.Properties.Resources.Oxygen_Icons_org_Oxygen_Status_dialog_warning;
+            this.sinDatosToolStripMenuItem.Name = "sinDatosToolStripMenuItem";
+            this.sinDatosToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
+            this.sinDatosToolStripMenuItem.Text = "Formulas Sin datos";
             // 
             // dataGridView1
             // 
@@ -263,84 +344,12 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // nuevoToolStripMenuItem
+            // coloresToolStripMenuItem
             // 
-            this.nuevoToolStripMenuItem.Image = global::Pinturas.Properties.Resources.tick;
-            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.nuevoToolStripMenuItem.Text = "Actualizar";
-            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
-            // 
-            // tinteToolStripMenuItem1
-            // 
-            this.tinteToolStripMenuItem1.Image = global::Pinturas.Properties.Resources.select_by_color;
-            this.tinteToolStripMenuItem1.Name = "tinteToolStripMenuItem1";
-            this.tinteToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
-            this.tinteToolStripMenuItem1.Text = "Tinte";
-            this.tinteToolStripMenuItem1.Click += new System.EventHandler(this.tinteToolStripMenuItem1_Click);
-            // 
-            // presentacionToolStripMenuItem1
-            // 
-            this.presentacionToolStripMenuItem1.Image = global::Pinturas.Properties.Resources.Graphicloads_Medical_Health_Equation;
-            this.presentacionToolStripMenuItem1.Name = "presentacionToolStripMenuItem1";
-            this.presentacionToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
-            this.presentacionToolStripMenuItem1.Text = "Formula";
-            this.presentacionToolStripMenuItem1.Click += new System.EventHandler(this.presentacionToolStripMenuItem1_Click);
-            // 
-            // vehiculosToolStripMenuItem
-            // 
-            this.vehiculosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarVehiculoToolStripMenuItem,
-            this.buscarVehiculoToolStripMenuItem});
-            this.vehiculosToolStripMenuItem.Image = global::Pinturas.Properties.Resources.vehiculo1;
-            this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
-            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.vehiculosToolStripMenuItem.Text = "Vehiculos ";
-            this.vehiculosToolStripMenuItem.Click += new System.EventHandler(this.vehiculosToolStripMenuItem_Click);
-            // 
-            // presentacionesTerminadasToolStripMenuItem
-            // 
-            this.presentacionesTerminadasToolStripMenuItem.Image = global::Pinturas.Properties.Resources.tick;
-            this.presentacionesTerminadasToolStripMenuItem.Name = "presentacionesTerminadasToolStripMenuItem";
-            this.presentacionesTerminadasToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
-            this.presentacionesTerminadasToolStripMenuItem.Text = "Formulas Completas";
-            this.presentacionesTerminadasToolStripMenuItem.Click += new System.EventHandler(this.presentacionesTerminadasToolStripMenuItem_Click);
-            // 
-            // presentacionesNoTerminadasToolStripMenuItem
-            // 
-            this.presentacionesNoTerminadasToolStripMenuItem.Image = global::Pinturas.Properties.Resources.delete2;
-            this.presentacionesNoTerminadasToolStripMenuItem.Name = "presentacionesNoTerminadasToolStripMenuItem";
-            this.presentacionesNoTerminadasToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
-            this.presentacionesNoTerminadasToolStripMenuItem.Text = "Formulas Incompletas";
-            this.presentacionesNoTerminadasToolStripMenuItem.Click += new System.EventHandler(this.presentacionesNoTerminadasToolStripMenuItem_Click);
-            // 
-            // faltanDetallesToolStripMenuItem
-            // 
-            this.faltanDetallesToolStripMenuItem.Image = global::Pinturas.Properties.Resources.Icojam_Blue_Bits_Warning;
-            this.faltanDetallesToolStripMenuItem.Name = "faltanDetallesToolStripMenuItem";
-            this.faltanDetallesToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
-            this.faltanDetallesToolStripMenuItem.Text = "Formulas con Falta de detalles";
-            this.faltanDetallesToolStripMenuItem.Click += new System.EventHandler(this.faltanDetallesToolStripMenuItem_Click);
-            // 
-            // sinDatosToolStripMenuItem
-            // 
-            this.sinDatosToolStripMenuItem.Image = global::Pinturas.Properties.Resources.Oxygen_Icons_org_Oxygen_Status_dialog_warning;
-            this.sinDatosToolStripMenuItem.Name = "sinDatosToolStripMenuItem";
-            this.sinDatosToolStripMenuItem.Size = new System.Drawing.Size(284, 26);
-            this.sinDatosToolStripMenuItem.Text = "Formulas Sin datos";
-            // 
-            // registrarVehiculoToolStripMenuItem
-            // 
-            this.registrarVehiculoToolStripMenuItem.Name = "registrarVehiculoToolStripMenuItem";
-            this.registrarVehiculoToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.registrarVehiculoToolStripMenuItem.Text = "Registrar Vehiculo";
-            this.registrarVehiculoToolStripMenuItem.Click += new System.EventHandler(this.registrarVehiculoToolStripMenuItem_Click);
-            // 
-            // buscarVehiculoToolStripMenuItem
-            // 
-            this.buscarVehiculoToolStripMenuItem.Name = "buscarVehiculoToolStripMenuItem";
-            this.buscarVehiculoToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.buscarVehiculoToolStripMenuItem.Text = "Buscar Vehiculo";
+            this.coloresToolStripMenuItem.Name = "coloresToolStripMenuItem";
+            this.coloresToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.coloresToolStripMenuItem.Text = "Colores";
+            this.coloresToolStripMenuItem.Click += new System.EventHandler(this.coloresToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -400,6 +409,7 @@
         private System.Windows.Forms.ToolStripMenuItem vehiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarVehiculoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarVehiculoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem coloresToolStripMenuItem;
     }
 }
 
