@@ -101,7 +101,7 @@ namespace Pinturas_Test
         public void TestActualizar()
         {
             FormulaPresentacion a = new FormulaPresentacion();
-            Assert.AreEqual(true, a.Actualizar());
+            Assert.AreEqual(true, a.m_Actualizar());
 
         }
 
@@ -119,7 +119,7 @@ namespace Pinturas_Test
         public void TestModificarRegistro()
         {
             FormulaPresentacion a = new FormulaPresentacion();
-            Assert.AreEqual(false, a.ModificarRegistro(0));
+            Assert.AreEqual(false, a.m_ModificarRegistro(0));
 
         }
 

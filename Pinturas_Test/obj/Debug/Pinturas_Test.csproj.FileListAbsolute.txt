@@ -32,6 +32,7 @@ C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas
 C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.csprojResolveAssemblyReference.cache
 C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.dll
 C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.pdb
+<<<<<<< HEAD
 C:\Users\anton\Desktop\codigo\Pinturas\Pinturas_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\anton\Desktop\codigo\Pinturas\Pinturas_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\anton\Desktop\codigo\Pinturas\Pinturas_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -48,3 +49,21 @@ C:\Users\anton\Desktop\codigo\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.csp
 C:\Users\anton\Desktop\codigo\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.csproj.CoreCompileInputs.cache
 C:\Users\anton\Desktop\codigo\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.dll
 C:\Users\anton\Desktop\codigo\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.pdb
+=======
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Pinturas_Test.dll
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Pinturas_Test.pdb
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Pinturas.exe
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Pinturas.pdb
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Pinturas.exe.config
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.csprojResolveAssemblyReference.cache
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.csproj.CoreCompileInputs.cache
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.dll
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas_Test\obj\Debug\Pinturas_Test.pdb
+>>>>>>> precios

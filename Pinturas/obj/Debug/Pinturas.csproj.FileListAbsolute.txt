@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\bin\Debug\Pinturas.exe.config
 C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\bin\Debug\Pinturas.exe
 C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\bin\Debug\Pinturas.pdb
@@ -10,7 +11,6 @@ C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pintura
 C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.CrearFormula.resources
 C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.FormulaPresentacion.resources
 C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.Registro.resources
-<<<<<<< HEAD
 C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\bin\Debug\Pinturas.exe.config
 C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\bin\Debug\Pinturas.exe
 C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\bin\Debug\Pinturas.pdb
@@ -70,3 +70,19 @@ C:\Users\anton\Desktop\codigo\Pinturas\Pinturas\obj\Debug\Pinturas.exe
 C:\Users\anton\Desktop\codigo\Pinturas\Pinturas\obj\Debug\Pinturas.pdb
 C:\Users\anton\Desktop\codigo\Pinturas\Pinturas\obj\Debug\Pinturas.Color.resources
 C:\Users\anton\Desktop\codigo\Pinturas\Pinturas\obj\Debug\Pinturas.Formulario_Color.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\bin\Debug\Pinturas.exe.config
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\bin\Debug\Pinturas.exe
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\bin\Debug\Pinturas.pdb
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.CrearFormula.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.Form1.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.FormulaPresentacion.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.Properties.Resources.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.RegistrarVehiculo.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.Registro.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.Tintes.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.GenerateResource.Cache
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.CoreCompileInputs.cache
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.exe
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.pdb
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.csprojResolveAssemblyReference.cache
+>>>>>>> precios
