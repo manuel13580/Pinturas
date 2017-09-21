@@ -48,6 +48,7 @@ namespace Pinturas
                     Conexion nueva = new Conexion();
                     int id_formula = ListaCodigosFormula.ElementAt(comboBox1.SelectedIndex);
                     String Completo=Obtener_Tintes(id_formula);
+                    MessageBox.Show(Completo);
                     if (Completo.Equals(""))
                     {
                         MessageBox.Show("Error Inesperado");

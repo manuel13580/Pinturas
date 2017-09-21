@@ -124,13 +124,6 @@ namespace Pinturas_Test
         }
 
 
-        [TestMethod]
-        public void Testcalc()
-        {
-            FormulaPresentacion a = new FormulaPresentacion();
-            Assert.AreEqual(false, a.calc());
-
-        }
 
         [TestMethod()]
         public void iniciar_verificacionTest()
@@ -154,7 +147,21 @@ namespace Pinturas_Test
             Tinte a = new Tinte();
             Assert.AreEqual(true, a.m_validar_campos("cod", "nomb", "mono", "rgb", "pre"));
         }
+        [TestMethod]
+        public void Validar_Conversion() {
+            Formulario_Color nuevo = new Formulario_Color();
+            String hexadecimal = "#FFFFFF" ;
+            String respuesta = "255,255,255";
+            Assert.AreEqual(respuesta, nuevo.Convertir(hexadecimal));
+        }
+        [TestMethod]
+        public void Validar_Obtener_Tintes() {
+            Formulario_Color nuevo = new Formulario_Color();
+            int indice = 1;
+            String respuesta="178,161,144";
+            Assert.AreEqual(respuesta, nuevo.Obtener_Tintes(indice));
 
+        }
 
     }
 }

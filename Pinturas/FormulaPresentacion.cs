@@ -255,6 +255,8 @@ namespace Pinturas
         }
         public bool calc()
         {
+
+            bool respuesta = true;
             Conexion nueva = new Conexion();
             double factor = 1;
             double val = 1;
@@ -266,13 +268,18 @@ namespace Pinturas
             nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", factor);
 
             actualizarTotal();
-            return true;
+            return respuesta;
         }
 
         private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Actualizar();
             actualizarTotal();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
