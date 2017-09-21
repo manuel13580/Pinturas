@@ -1,55 +1,15 @@
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\bin\Debug\Pinturas.exe.config
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\bin\Debug\Pinturas.exe
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\bin\Debug\Pinturas.pdb
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.csprojResolveAssemblyReference.cache
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.Form1.resources
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.Properties.Resources.resources
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.GenerateResource.Cache
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.exe
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.pdb
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.CrearFormula.resources
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.FormulaPresentacion.resources
-C:\Users\anton\Desktop\U\ss2017\ayd1\sprint1\Pinturas\Pinturas\obj\Debug\Pinturas.Registro.resources
-<<<<<<< HEAD
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\bin\Debug\Pinturas.exe.config
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\bin\Debug\Pinturas.exe
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\bin\Debug\Pinturas.pdb
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\obj\Debug\Pinturas.csprojResolveAssemblyReference.cache
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\obj\Debug\Pinturas.CrearFormula.resources
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\obj\Debug\Pinturas.Form1.resources
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\obj\Debug\Pinturas.FormulaPresentacion.resources
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\obj\Debug\Pinturas.Properties.Resources.resources
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\obj\Debug\Pinturas.Registro.resources
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.GenerateResource.Cache
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.CoreCompileInputs.cache
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\obj\Debug\Pinturas.exe
-C:\Users\Paublo Martínez\Desktop\PROYECTO\Pinturas\Pinturas\obj\Debug\Pinturas.pdb
-=======
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\bin\Debug\Pinturas.exe.config
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\bin\Debug\Pinturas.exe
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\bin\Debug\Pinturas.pdb
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\obj\Debug\Pinturas.csprojResolveAssemblyReference.cache
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\obj\Debug\Pinturas.CrearFormula.resources
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\obj\Debug\Pinturas.Form1.resources
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\obj\Debug\Pinturas.FormulaPresentacion.resources
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\obj\Debug\Pinturas.Properties.Resources.resources
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\obj\Debug\Pinturas.Registro.resources
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\obj\Debug\Pinturas.Tintes.resources
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.GenerateResource.Cache
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\obj\Debug\Pinturas.exe
-C:\Users\anton\Desktop\Calificacion\Pinturas\Pinturas\obj\Debug\Pinturas.pdb
->>>>>>> C_tinte
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\bin\Debug\Pinturas.exe.config
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\bin\Debug\Pinturas.exe
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\bin\Debug\Pinturas.pdb
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.csprojResolveAssemblyReference.cache
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.CrearFormula.resources
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.Form1.resources
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.FormulaPresentacion.resources
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.Properties.Resources.resources
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.Registro.resources
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.Tintes.resources
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.GenerateResource.Cache
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.exe
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.pdb
-C:\Users\Fabi\Documents\Analisis\Pinturas-2.5.0\Pinturas-2.5.0\Pinturas\Pinturas\obj\Debug\Pinturas.RegistrarVehiculo.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\bin\Debug\Pinturas.exe.config
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\bin\Debug\Pinturas.exe
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\bin\Debug\Pinturas.pdb
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.CrearFormula.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.Form1.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.FormulaPresentacion.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.Properties.Resources.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.RegistrarVehiculo.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.Registro.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.Tintes.resources
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.GenerateResource.Cache
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.CoreCompileInputs.cache
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.exe
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.pdb
+C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.csprojResolveAssemblyReference.cache

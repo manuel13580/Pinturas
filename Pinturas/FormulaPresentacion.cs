@@ -73,7 +73,7 @@ namespace Pinturas
             }
             combo_formula.Text = this.Tamaño;
             combomedidas.Text = this.Tamaño;
-            c_nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", 1);
+            c_nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\", t.Precio as \"Precio\" from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", 1);
             actualizarTotal();
             return true;
         }
@@ -263,7 +263,7 @@ namespace Pinturas
                 v_val = Convert.ToDouble(valorN[0]);
             double v_volumen = Convert.ToDouble(txtvolumen.Text);
             v_factor = v_volumen / v_val;
-            nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", v_factor);
+            nueva.LlenarGridFormula("select a.Codigo_tinte as \"Codigo\", t.Nombre as \"Nombre\", a.Cantidad as \"Cantidad (g)\" , t.Precio as \"Precio\"  from Asignacion a, Tinte t where a.Codigo_tinte=t.Codigo_tinte and a.Id_presentacion=" + valor + ";", dataGridView1, "Asignacion", v_factor);
 
             actualizarTotal();
             return true;
@@ -273,6 +273,11 @@ namespace Pinturas
         {
             m_Actualizar();
             actualizarTotal();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

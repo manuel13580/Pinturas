@@ -21,6 +21,7 @@ namespace Pinturas
             Conexion nueva = new Conexion();
             string consulta = "select p.Id_presentacion as \"Numero\", a.Marca as \"Tipo de Auto\", p.Codigo_color as \"Codigo de Color\", p.Descripcion as \"Descripcion\", p.Tamaño_Medida as \"Cantidad de Formula\",  p.Completo as \"Estado de Formula\", p.Año_Inicial as \"Año Inicial \", p.Año_Final as \"Año Final \"  from Automovil a, Presentacion p where p.Id_auto=a.Id_auto;";
             nueva.LlenarGrid(consulta, dataGridView1, "Automovil");
+            nueva.llenarPreciosFormula(dataGridView1);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -55,6 +56,8 @@ namespace Pinturas
             Conexion nueva = new Conexion();
             string consulta = "select p.Id_presentacion as \"Numero\", a.Marca as \"Tipo de Auto\", p.Codigo_color as \"Codigo de Color\", p.Descripcion as \"Descripcion\", p.Tamaño_Medida as \"Cantidad de Formula\", p.Completo as \"Estado de Formula\", p.Año_Inicial as \"Año Inicial \", p.Año_Final as \"Año Final \"  from Automovil a, Presentacion p where p.Id_auto=a.Id_auto;";
             nueva.LlenarGrid(consulta, dataGridView1, "Automovil");
+            nueva.llenarPreciosFormula(dataGridView1);
+
         }
         public bool llenarCombo()
         {
