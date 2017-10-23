@@ -108,7 +108,7 @@ namespace Pinturas
                 int v_pos = dataGridView1.CurrentRow.Index;
                 m_Actualizar();
                 dataGridView1.Rows[v_pos].Selected = true;
-                m_ModificarRegistro(v_pos);
+                //m_ModificarRegistro(v_pos);
             }
             catch (Exception ex)
             { }
@@ -277,11 +277,12 @@ namespace Pinturas
             actualizarTotal();
         }
 
-<<<<<<< HEAD
-        private void groupBox3_Enter(object sender, EventArgs e)
-=======
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
->>>>>>> precios
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

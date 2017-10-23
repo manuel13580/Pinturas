@@ -86,3 +86,17 @@ C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.exe
 C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.pdb
 C:\Users\Paublo Martínez\Desktop\Pinturas\Pinturas\obj\Debug\Pinturas.csprojResolveAssemblyReference.cache
 >>>>>>> precios
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.csprojResolveAssemblyReference.cache
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.Color.resources
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.CrearFormula.resources
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.Form1.resources
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.FormulaPresentacion.resources
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.Formulario_Color.resources
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.Properties.Resources.resources
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.RegistrarVehiculo.resources
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.Registro.resources
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.Tintes.resources
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.GenerateResource.Cache
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.csproj.CoreCompileInputs.cache
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.exe
+C:\Users\anton\Desktop\U\ss2017\ayd1\sprint3\Pinturas\Pinturas\obj\Debug\Pinturas.pdb
