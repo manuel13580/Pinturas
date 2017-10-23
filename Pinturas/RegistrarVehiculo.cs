@@ -50,12 +50,72 @@ namespace Pinturas
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (comboMarca.Text.Trim() != "" && comboModelo.Text.Trim() != "" && comboTipo.Text.Trim() != "")
+            {
+                try
+                {
+                    Conexion nueva = new Conexion();
+                    nueva.EjecutarQuery("delete from Presentacion  where Id_auto='" + codactual + "';");
+                    nueva.EjecutarQuery("delete from Automovil  where Id_auto='" + codactual + "';");
+                    comboMarca.Text = "";
+                    comboModelo.Text = "";
+                    comboTipo.Text = "";
 
+
+                    nueva.llenarGridViewVehiculos(dgvVehiculos);
+                    MessageBox.Show("Vehiculo fue Eliminado con exito");
+                    codactual = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error " + ex.ToString());
+                }
+
+            }
         }
 
         private void dgvVehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        public string codactual = "";
+        private void dgvVehiculos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            comboMarca.Text = dgvVehiculos.CurrentRow.Cells[1].Value.ToString();
+            comboModelo.Text = dgvVehiculos.CurrentRow.Cells[2].Value.ToString();
+            comboTipo.Text = dgvVehiculos.CurrentRow.Cells[3].Value.ToString();
+            codactual = dgvVehiculos.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (comboMarca.Text.Trim() != "" && comboModelo.Text.Trim() != "" && comboTipo.Text.Trim() != "")
+            {
+                try
+                {
+                    Conexion nueva = new Conexion();
+                    nueva.EjecutarQuery("update Automovil set Marca='" + comboMarca.Text.ToString() + "', Modelo='" + comboModelo.Text.ToString() + "', Tipo='" + comboTipo.Text + "' where Id_auto='" + codactual + "';");
+                    comboMarca.Text = "";
+                    comboModelo.Text = "";
+                    comboTipo.Text = "";
+
+                    
+                    nueva.llenarGridViewVehiculos(dgvVehiculos);
+                    MessageBox.Show("Vehiculo fue modificado con exito");
+                    codactual = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error "+ex.ToString());
+                }
+
+            }
+        }
+
+        private void txtbusqueda_TextChanged(object sender, EventArgs e)
+        {
+            Conexion nueva = new Conexion();
+            nueva.llenarGridViewTintesSQL(dgvVehiculos, "select * from Automovil where Marca like '%" + txtbusqueda.Text + "%';");
         }
     }
 }
