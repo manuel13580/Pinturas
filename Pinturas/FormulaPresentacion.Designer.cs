@@ -57,6 +57,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtvolumen = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.eliminarFormulaCompletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -293,7 +294,8 @@
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.actualizarToolStripMenuItem});
+            this.actualizarToolStripMenuItem,
+            this.eliminarFormulaCompletaToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.opcionesToolStripMenuItem.Text = "Opciones";
@@ -301,11 +303,7 @@
             // actualizarToolStripMenuItem
             // 
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
-
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.actualizarToolStripMenuItem.Text = "Actualizar";
             this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 
@@ -380,6 +378,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // eliminarFormulaCompletaToolStripMenuItem
+            // 
+            this.eliminarFormulaCompletaToolStripMenuItem.Name = "eliminarFormulaCompletaToolStripMenuItem";
+            this.eliminarFormulaCompletaToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.eliminarFormulaCompletaToolStripMenuItem.Text = "Eliminar Formula Completa";
+            this.eliminarFormulaCompletaToolStripMenuItem.Click += new System.EventHandler(this.eliminarFormulaCompletaToolStripMenuItem_Click);
+            // 
             // FormulaPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,7 +394,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormulaPresentacion";
             this.Text = "FormulaPresentacion";
             this.Load += new System.EventHandler(this.FormulaPresentacion_Load);
@@ -438,5 +443,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtvolumen;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem eliminarFormulaCompletaToolStripMenuItem;
     }
 }

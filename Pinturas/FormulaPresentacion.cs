@@ -285,6 +285,26 @@ namespace Pinturas
         {
 
         }
+
+        private void eliminarFormulaCompletaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Conexion nueva = new Conexion();
+                DialogResult dialogResult = MessageBox.Show("¿En realidad desea eliminar la formula completa?, se eliminaran todos sus registros. ", "Aviso", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    nueva.EjecutarQuery("delete from Asignacion where Id_presentacion=" + valor + ";");
+                    nueva.EjecutarQuery("delete from Presentacion where Id_presentacion=" + valor + ";");
+                    MessageBox.Show("Formula Eliminada");
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Existio un error en la eliminacion"+ex.ToString());
+            }
+        }
     }
 }
 
