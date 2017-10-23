@@ -44,6 +44,8 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtbusqueda = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTintes)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -53,9 +55,9 @@
             // 
             this.groupBox2.Controls.Add(this.dgvTintes);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(10, 227);
+            this.groupBox2.Location = new System.Drawing.Point(10, 261);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(602, 274);
+            this.groupBox2.Size = new System.Drawing.Size(602, 240);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Listado Total de Tintes Disponibles";
@@ -68,12 +70,12 @@
             this.dgvTintes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvTintes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTintes.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvTintes.Location = new System.Drawing.Point(6, 19);
+            this.dgvTintes.Location = new System.Drawing.Point(6, 18);
             this.dgvTintes.MultiSelect = false;
             this.dgvTintes.Name = "dgvTintes";
             this.dgvTintes.ReadOnly = true;
             this.dgvTintes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTintes.Size = new System.Drawing.Size(574, 233);
+            this.dgvTintes.Size = new System.Drawing.Size(574, 234);
             this.dgvTintes.TabIndex = 5;
             this.dgvTintes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTintes_CellContentClick);
             this.dgvTintes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTintes_CellDoubleClick);
@@ -229,11 +231,30 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 235);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Ingrese Codigo:";
+            // 
+            // txtbusqueda
+            // 
+            this.txtbusqueda.Location = new System.Drawing.Point(104, 232);
+            this.txtbusqueda.Name = "txtbusqueda";
+            this.txtbusqueda.Size = new System.Drawing.Size(100, 20);
+            this.txtbusqueda.TabIndex = 16;
+            this.txtbusqueda.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Tintes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 505);
+            this.Controls.Add(this.txtbusqueda);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Tintes";
@@ -244,6 +265,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -265,5 +287,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textPrecio;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtbusqueda;
     }
 }

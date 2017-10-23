@@ -103,6 +103,7 @@ namespace Pinturas
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 int v_pos = dataGridView1.CurrentRow.Index;
@@ -111,7 +112,9 @@ namespace Pinturas
                 m_ModificarRegistro(v_pos);
             }
             catch (Exception ex)
-            { }
+            {
+                MessageBox.Show("Modificacion Erronea " + ex.ToString());
+            }
         }
 
 
@@ -152,6 +155,7 @@ namespace Pinturas
             }
             catch (Exception q)
             {
+                MessageBox.Show("Modificacion Erronea " + q.ToString());
                 return false;
             }
 

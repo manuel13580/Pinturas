@@ -146,5 +146,11 @@ namespace Pinturas
 
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            Conexion nueva = new Conexion();
+            nueva.llenarGridViewTintesSQL(dgvTintes, "select * from Tinte where Codigo_tinte like '%" + txtbusqueda.Text + "%';");
+        }
     }
 }
