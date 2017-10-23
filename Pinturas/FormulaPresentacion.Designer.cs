@@ -301,11 +301,11 @@
             // actualizarToolStripMenuItem
             // 
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-<<<<<<< HEAD
+
             this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
-=======
+
             this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
->>>>>>> precios
+
             this.actualizarToolStripMenuItem.Text = "Actualizar";
             this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 

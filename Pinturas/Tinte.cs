@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 
 namespace Pinturas
 {

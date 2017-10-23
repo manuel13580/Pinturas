@@ -59,10 +59,34 @@ namespace Pinturas
         {
 
         }
-
+        public string codactual = "";
         private void button2_Click(object sender, EventArgs e)
         {
+           
 
+            if (txtcodigo.Text.Trim() != "" && txtnombre.Text.Trim() != "")
+            {
+                try
+                {
+                    Conexion nueva = new Conexion();
+                    nueva.EjecutarQuery("update Tinte set Codigo_tinte='" + txtcodigo.Text.ToString() + "', Nombre='" + txtnombre.Text.ToString() + "', MonoCapa='" + txtmonocapa.Text + "', RGB='"+textrgb.Text+"', Precio='"+textPrecio.Text+"' where Codigo_tinte='" + codactual + "';");
+                    txtcodigo.Text = "";
+                    txtnombre.Text = "";
+                    txtmonocapa.Text = "";
+                    textrgb.Text = "";
+                    textPrecio.Text = "";
+                    nueva.llenarGridViewTintes(dgvTintes);
+                    MessageBox.Show("Tinte fue modificado con exito");
+                    codactual = "";
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error ese Codigo de tinte Ya existe");
+                }
+
+            }
         }
 
         private void txtnombre_TextChanged(object sender, EventArgs e)
@@ -72,7 +96,55 @@ namespace Pinturas
 
         private void Tintes_Load(object sender, EventArgs e)
         {
+            Conexion c_conexion = new Conexion();
+            c_conexion.llenarGridViewTintes(dgvTintes);
+        }
 
+        private void dgvTintes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvTintes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtcodigo.Text = dgvTintes.CurrentRow.Cells[0].Value.ToString();
+            txtnombre.Text = dgvTintes.CurrentRow.Cells[1].Value.ToString();
+            txtmonocapa.Text = dgvTintes.CurrentRow.Cells[2].Value.ToString();
+            textrgb.Text = dgvTintes.CurrentRow.Cells[3].Value.ToString();
+            textPrecio.Text = dgvTintes.CurrentRow.Cells[4].Value.ToString();
+            codactual = txtcodigo.Text;
+            button2.Enabled = true;
+            button3.Enabled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (txtcodigo.Text.Trim() != "" && txtnombre.Text.Trim() != "")
+            {
+                try
+                {
+                    Conexion nueva = new Conexion();
+                    DialogResult dialogResult = MessageBox.Show("¿Desea eliminar el Tinte " + codactual + " y todos sus registros?", "Aviso", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        nueva.EjecutarQuery("delete from Tinte where Codigo_tinte='" + codactual + "';");
+                        txtcodigo.Text = "";
+                        txtnombre.Text = "";
+                        txtmonocapa.Text = "";
+                        textrgb.Text = "";
+                        textPrecio.Text = "";
+                        nueva.llenarGridViewTintes(dgvTintes);
+                        codactual = "";
+                        button2.Enabled = false;
+                        button3.Enabled = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error ese Codigo no Existe");
+                }
+
+            }
         }
     }
 }

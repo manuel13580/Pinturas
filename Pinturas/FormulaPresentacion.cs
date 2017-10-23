@@ -277,11 +277,11 @@ namespace Pinturas
             actualizarTotal();
         }
 
-<<<<<<< HEAD
-        private void groupBox3_Enter(object sender, EventArgs e)
-=======
+
+        private void groupBox3_Enter(object sender, EventArgs e) { }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
->>>>>>> precios
+
         {
 
         }
