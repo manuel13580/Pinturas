@@ -164,5 +164,10 @@ namespace Pinturas
             Color nuevo = new Color();
             nuevo.Show();
         }
+
+        private void buscarVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

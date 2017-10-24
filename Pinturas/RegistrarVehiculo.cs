@@ -55,8 +55,7 @@ namespace Pinturas
                 try
                 {
                     Conexion nueva = new Conexion();
-                    nueva.EjecutarQuery("delete from Presentacion  where Id_auto='" + codactual + "';");
-                    nueva.EjecutarQuery("delete from Automovil  where Id_auto='" + codactual + "';");
+                    EliminarVehiculo();
                     comboMarca.Text = "";
                     comboModelo.Text = "";
                     comboTipo.Text = "";
@@ -73,7 +72,19 @@ namespace Pinturas
 
             }
         }
-
+        public bool EliminarVehiculo()
+        {
+            try {
+                Conexion nueva = new Conexion();
+                nueva.EjecutarQuery("delete from Presentacion  where Id_auto='" + codactual + "';");
+                nueva.EjecutarQuery("delete from Automovil  where Id_auto='" + codactual + "';");
+                return true;
+            }
+            catch (Exception ex) {
+                return false;
+            }
+            
+        }
         private void dgvVehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -111,11 +122,24 @@ namespace Pinturas
 
             }
         }
-
+        public bool ModificarAutomovil(String marca, String modelo,String tipo,String codactual)
+        {
+            try
+            {
+                Conexion nueva = new Conexion();
+                nueva.EjecutarQuery("update Automovil set Marca='" + marca + "', Modelo='" + modelo + "', Tipo='" + tipo + "' where Id_auto='" + codactual + "';");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
         private void txtbusqueda_TextChanged(object sender, EventArgs e)
         {
             Conexion nueva = new Conexion();
             nueva.llenarGridViewTintesSQL(dgvVehiculos, "select * from Automovil where Marca like '%" + txtbusqueda.Text + "%';");
         }
+       
     }
 }

@@ -160,8 +160,9 @@ namespace Pinturas_Test
             int indice = 1;
             String respuesta="178,161,144";
             Assert.AreEqual(respuesta, nuevo.Obtener_Tintes(indice));
-
         }
+        
+
 
     }
 }

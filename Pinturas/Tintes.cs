@@ -70,12 +70,12 @@ namespace Pinturas
                 {
                     Conexion nueva = new Conexion();
                     nueva.EjecutarQuery("update Tinte set Codigo_tinte='" + txtcodigo.Text.ToString() + "', Nombre='" + txtnombre.Text.ToString() + "', MonoCapa='" + txtmonocapa.Text + "', RGB='"+textrgb.Text+"', Precio='"+textPrecio.Text+"' where Codigo_tinte='" + codactual + "';");
+                    nueva.llenarGridViewTintes(dgvTintes);
                     txtcodigo.Text = "";
                     txtnombre.Text = "";
                     txtmonocapa.Text = "";
                     textrgb.Text = "";
                     textPrecio.Text = "";
-                    nueva.llenarGridViewTintes(dgvTintes);
                     MessageBox.Show("Tinte fue modificado con exito");
                     codactual = "";
                     button2.Enabled = false;
@@ -88,7 +88,30 @@ namespace Pinturas
 
             }
         }
-
+        public bool modificar()
+        {
+            bool ans = false;
+            try
+            {
+                Conexion nueva = new Conexion();
+                nueva.EjecutarQuery("update Tinte set Codigo_tinte='" + txtcodigo.Text.ToString() + "', Nombre='" + txtnombre.Text.ToString() + "', MonoCapa='" + txtmonocapa.Text + "', RGB='" + textrgb.Text + "', Precio='" + textPrecio.Text + "' where Codigo_tinte='" + codactual + "';");
+                nueva.llenarGridViewTintes(dgvTintes);
+                txtcodigo.Text = "";
+                txtnombre.Text = "";
+                txtmonocapa.Text = "";
+                textrgb.Text = "";
+                textPrecio.Text = "";
+                MessageBox.Show("Tinte fue modificado con exito");
+                codactual = "";
+                button2.Enabled = false;
+                button3.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error ese Codigo de tinte Ya existe");
+            }
+            return ans;
+        }
         private void txtnombre_TextChanged(object sender, EventArgs e)
         {
 
@@ -127,7 +150,8 @@ namespace Pinturas
                     DialogResult dialogResult = MessageBox.Show("¿Desea eliminar el Tinte " + codactual + " y todos sus registros?", "Aviso", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        nueva.EjecutarQuery("delete from Tinte where Codigo_tinte='" + codactual + "';");
+                        //nueva.EjecutarQuery("delete from Tinte where Codigo_tinte='" + codactual + "';");
+                        eliminarTinte();
                         txtcodigo.Text = "";
                         txtnombre.Text = "";
                         txtmonocapa.Text = "";
@@ -146,7 +170,19 @@ namespace Pinturas
 
             }
         }
-
+        public bool eliminarTinte()
+        {
+            try
+            {
+                Conexion nueva = new Conexion();
+                nueva.EjecutarQuery("delete from Tinte where Codigo_tinte='" + codactual + "';");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             Conexion nueva = new Conexion();

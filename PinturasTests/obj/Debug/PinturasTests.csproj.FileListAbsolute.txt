@@ -1,0 +1,8 @@
+C:\Users\Chejo\Desktop\Analisis1\Repositorio Fase4\Pinturas\PinturasTests\bin\Debug\PinturasTests.dll
+C:\Users\Chejo\Desktop\Analisis1\Repositorio Fase4\Pinturas\PinturasTests\bin\Debug\PinturasTests.pdb
+C:\Users\Chejo\Desktop\Analisis1\Repositorio Fase4\Pinturas\PinturasTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Chejo\Desktop\Analisis1\Repositorio Fase4\Pinturas\PinturasTests\bin\Debug\Pinturas.exe
+C:\Users\Chejo\Desktop\Analisis1\Repositorio Fase4\Pinturas\PinturasTests\bin\Debug\Pinturas.pdb
+C:\Users\Chejo\Desktop\Analisis1\Repositorio Fase4\Pinturas\PinturasTests\obj\Debug\PinturasTests.csprojResolveAssemblyReference.cache
+C:\Users\Chejo\Desktop\Analisis1\Repositorio Fase4\Pinturas\PinturasTests\obj\Debug\PinturasTests.dll
+C:\Users\Chejo\Desktop\Analisis1\Repositorio Fase4\Pinturas\PinturasTests\obj\Debug\PinturasTests.pdb

@@ -292,6 +292,11 @@ namespace Pinturas
 
         private void eliminarFormulaCompletaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            eliminarFormula(valor);
+            
+        }
+        public bool eliminarFormula(int valor)
+        {
             try
             {
                 Conexion nueva = new Conexion();
@@ -306,8 +311,9 @@ namespace Pinturas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Existio un error en la eliminacion"+ex.ToString());
+                MessageBox.Show("Existio un error en la eliminacion" + ex.ToString());
             }
+            return true;
         }
     }
 }
